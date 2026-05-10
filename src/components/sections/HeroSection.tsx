@@ -29,8 +29,8 @@ export default function HeroSection() {
           {/* MAIN TEXT */}
           <div className="max-w-130 py-16 lg:py-0">
             <h1 className="text-[44px] font-medium leading-[0.95] tracking-[-0.04em] sm:text-[64px] md:text-[72px] lg:text-[84px]">
-              Adelaida Art Mask is an art director and designer specializing in holistic
-              brand design.
+              Art Mask is an artist and designer specializing in holistic
+              art and brand design.
             </h1>
           </div>
 
@@ -86,9 +86,7 @@ export default function HeroSection() {
           {/* NAME */}
           <div className="absolute bottom-6 left-6 z-10 sm:bottom-10 sm:left-10 lg:bottom-14 lg:left-14">
             <h2 className="text-[56px] font-black uppercase leading-[0.9] tracking-tighter text-white sm:text-[90px] md:text-[110px] lg:text-[120px] xl:text-[140px]">
-              Alla
-              <br />
-              Efremova
+              Adelaida
             </h2>
           </div>
 
