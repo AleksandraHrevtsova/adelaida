@@ -1,29 +1,50 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Geist, Geist_Mono } from 'next/font/google';
+import './globals.css';
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "Adelaida Art Mask",
-  description: "Professional art portfolio and gallery",
+  metadataBase: 'https://adelaida-gold.vercel.app/',
+  title: {
+    default: "Art Master",
+    template: "%s | Art Master",
+  },
+  description: 'Professional art portfolio and gallery',
+  openGraph: {
+    title: 'Adelaida Art Mask',
+    description: 'Professional art portfolio and gallery',
+    url: 'https://adelaida-gold.vercel.app/',
+    siteName: "Adelaida Art Mask",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Art Master",
+      },
+    ],
+
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Art Master",
+    description: "Professional art portfolio",
+    images: ["/og-image.jpg"],
+  },
+
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
-  },
-  openGraph: {
-    title: "Adelaida Art Mask",
-    description: "Professional art portfolio and gallery",
-    images: "/og-image.jpg",
   },
 };
 
@@ -34,10 +55,10 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang='en'
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className='min-h-full flex flex-col'>{children}</body>
     </html>
   );
 }
