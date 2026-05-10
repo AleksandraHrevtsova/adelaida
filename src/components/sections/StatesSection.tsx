@@ -135,7 +135,7 @@ function MobileOverlayCard({
         <div className={`absolute inset-0 ${item.overlay}`} />
 
         {/* overlay card */}
-        <div className="absolute inset-4 flex flex-col justify-end border border-white/20 bg-white/10 p-6 backdrop-blur-md">
+        <div className="absolute inset-4 flex flex-col justify-end border border-white/20 bg-white/10 p-6 backdrop-blur-s">
           <h3 className="mb-4 text-3xl font-semibold text-white">
             {item.title}
           </h3>
