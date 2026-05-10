@@ -20,7 +20,7 @@ const items: CardItem[] = [
     id: 1,
     title: 'Вогонь',
     description:
-      'Just a short sentence. Write your own copy text here.',
+      'Психологія, демони',
     image: 'https://res.cloudinary.com/dbiudjxuw/image/upload/f_auto,q_auto/states_fire_desire_wzvezj',
       // 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop',
     href: '/gallery/fire',
