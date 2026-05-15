@@ -3,7 +3,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { useTranslations } from 'next-intl';
+
 export default function HeroSection() {
+  const t = useTranslations('hero');
+
   return (
     <section className='min-h-screen bg-white'>
       <div className='grid min-h-screen grid-cols-1 lg:grid-cols-2'>
@@ -11,26 +15,31 @@ export default function HeroSection() {
         <div className='flex flex-col justify-between bg-[#3f3f3f] px-6 py-8 text-white sm:px-10 sm:py-10 lg:px-16 lg:py-14'>
           {/* TOP NAV */}
           <div className='flex flex-col gap-2 text-sm sm:text-base'>
-            {/* <Link
+            <Link
               href='/details'
               className='transition-opacity duration-300 hover:opacity-70'
             >
               Details
-            </Link> */}
+            </Link>
 
-            {/* <Link
+            <Link
               href='/journal'
               className='transition-opacity duration-300 hover:opacity-70'
             >
               Journal
-            </Link> */}
+            </Link>
           </div>
 
           {/* MAIN TEXT */}
-          <div className='max-w-130 py-16 lg:py-0'>
-            <h1 className='text-[44px] font-medium leading-[0.95] tracking-[-0.04em] sm:text-[64px] md:text-[72px] lg:text-[84px]'>
-              Art Mask is an artist and designer specializing in holistic
-              art and brand design.
+          <div className='max-w-[90vw] py-12 sm:max-w-175 lg:py-0'>
+            <h1 className='flex flex-col gap-3 text-[clamp(2.5rem,8vw,5.25rem)] font-medium leading-[0.95] tracking-[-0.03em] wrap-break-words'>
+              <span>{t('title')}</span>
+
+              <span>{t('subTitle')}</span>
+
+              <span className='max-w-[20ch] text-[clamp(1rem,3vw,1.5rem)] leading-[1.3] tracking-[-0.01em] text-white/80'>
+                {t('description')}
+              </span>
             </h1>
           </div>
 
@@ -57,12 +66,12 @@ export default function HeroSection() {
 
             </div>
 
-            {/* <Link
+            <Link
               href='/blog'
               className='transition-opacity duration-300 hover:opacity-70'
             >
               Blog
-            </Link> */}
+            </Link>
           </div>
         </div>
 

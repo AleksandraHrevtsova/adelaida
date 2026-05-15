@@ -1,0 +1,22 @@
+{
+  "navigation": {
+    "home": "Головна",
+    "gallery": "Галерея",
+    "ideas": "Ідеї",
+    "accessories": "Аксесуари",
+    "patches": "Патчі"
+  },
+  "hero": {
+    "title": "Мультидисциплінарна художниця",
+    "subTitle": "Я створюю не об’єкти — я створюю стани.",
+    "description": "Кожна робота є глибоко прожитою та особисто проведеною автором."
+  },
+  "fashion": {
+    "accessoriesTitle": "Витончені аксесуари",
+    "accessoriesButton": "Обрати",
+
+    "patchesTitle": "Патчі",
+    "patchesDescription": "Унікальні прикраси",
+    "patchesButton": "Обрати"
+  }
+}

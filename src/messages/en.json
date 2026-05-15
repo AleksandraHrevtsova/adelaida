@@ -1,0 +1,22 @@
+{
+  "navigation": {
+    "home": "Home",
+    "gallery": "Gallery",
+    "ideas": "Ideas",
+    "accessories": "Accessories",
+    "patches": "Patches"
+  },
+  "hero": {
+    "title": "Multidisciplinary Artist",
+    "subTitle": "I don’t create objects — I create states.",
+    "description": "Each piece is deeply lived through and personally guided by the author."
+  },
+  "fashion": {
+    "accessoriesTitle": "Elegant Accessories",
+    "accessoriesButton": "Explore",
+
+    "patchesTitle": "Patches",
+    "patchesDescription": "Unique decorative pieces",
+    "patchesButton": "Explore"
+  }
+}
