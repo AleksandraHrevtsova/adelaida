@@ -16,17 +16,17 @@ export default function HeroSection() {
           {/* TOP NAV */}
           <div className='flex flex-col gap-2 text-sm sm:text-base'>
             <Link
-              href='/details'
+              href='/en'
               className='transition-opacity duration-300 hover:opacity-70'
             >
-              Details
+              EN
             </Link>
 
             <Link
-              href='/journal'
+              href='/ua'
               className='transition-opacity duration-300 hover:opacity-70'
             >
-              Journal
+              UA
             </Link>
           </div>
 
@@ -65,13 +65,6 @@ export default function HeroSection() {
               </Link>
 
             </div>
-
-            <Link
-              href='/blog'
-              className='transition-opacity duration-300 hover:opacity-70'
-            >
-              Blog
-            </Link>
           </div>
         </div>
 

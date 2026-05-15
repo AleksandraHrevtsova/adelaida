@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 type CardItem = {
   id: number;
@@ -18,58 +19,51 @@ type CardItem = {
 const items: CardItem[] = [
   {
     id: 1,
-    title: 'Вогонь',
-    description:
-      'Психологія, демони',
+    title: 'fireTitle',
+    description: 'fireDescription',
     image: 'https://res.cloudinary.com/dbiudjxuw/image/upload/f_auto,q_auto/states_fire_desire_wzvezj',
       // 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop',
     href: '/gallery/fire',
-
-    overlay: 'bg-red-700/35',
-    cardBg: 'bg-red-500/20',
-    cardHover: 'hover:bg-red-700/85',
+    overlay: 'bg-red-200/35',
+    cardBg: 'bg-red-200/20',
+    cardHover: 'hover:bg-red-300/85',
   },
 
   {
     id: 2,
-    title: 'Вода',
-    description:
-      'Just a short sentence. Write your own copy text here.',
+    title: 'waterTitle',
+    description: 'waterDescription',
     image: 'https://res.cloudinary.com/dbiudjxuw/image/upload/f_auto,q_auto/states_fire_desire_wzvezj',
       // 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
     href: '/gallery/water',
-
-    overlay: 'bg-cyan-600/35',
-    cardBg: 'bg-cyan-400/20',
-    cardHover: 'hover:bg-cyan-600/85',
+    overlay: 'bg-cyan-200/35',
+    cardBg: 'bg-cyan-200/20',
+    cardHover: 'hover:bg-cyan-300/85',
   },
 
   {
     id: 3,
-    title: 'Повітря',
-    description:
-      'Just a short sentence. Write your own copy text here.',
+    title: 'airTitle',
+    description: 'airDescription',
     image: 'https://res.cloudinary.com/dbiudjxuw/image/upload/f_auto,q_auto/states_fire_desire_wzvezj',
       // 'https://images.unsplash.com/photo-1511988617509-a57c8a288659?q=80&w=1200&auto=format&fit=crop',
     href: '/gallery/air',
 
-    overlay: 'bg-sky-300/35',
-    cardBg: 'bg-sky-300/20',
+    overlay: 'bg-sky-200/35',
+    cardBg: 'bg-sky-200/20',
     cardHover: 'hover:bg-sky-300/85',
   },
 
   {
     id: 4,
-    title: 'Земля',
-    description:
-      'Just a short sentence. Write your own copy text here.',
+    title: 'earthTitle',
+    description: 'earthDescription',
     image: 'https://res.cloudinary.com/dbiudjxuw/image/upload/f_auto,q_auto/states_fire_desire_wzvezj',
       // 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop',
     href: '/gallery/earth',
-
-    overlay: 'bg-black/45',
+    overlay: 'bg-black/20',
     cardBg: 'bg-black/20',
-    cardHover: 'hover:bg-black/75',
+    cardHover: 'hover:bg-black/30',
   },
 ];
 
@@ -87,6 +81,8 @@ function TextCard({
   cardBg: string;
   cardHover: string;
 }) {
+  const t = useTranslations('states');
+
   return (
     <Link
       href={href}
@@ -107,7 +103,7 @@ function TextCard({
       </p>
 
       <span className="mt-10 w-fit border-b border-black/30 pb-1 text-lg text-black transition duration-300 group-hover:border-black">
-        Read More
+        {t('more')}
       </span>
     </Link>
   );
@@ -118,6 +114,7 @@ function MobileOverlayCard({
 }: {
   item: CardItem;
 }) {
+  const t = useTranslations('states');
   return (
     <Link
       href={item.href}
@@ -135,17 +132,17 @@ function MobileOverlayCard({
         <div className={`absolute inset-0 ${item.overlay}`} />
 
         {/* overlay card */}
-        <div className="absolute inset-4 flex flex-col justify-end border border-white/20 bg-white/10 p-6 backdrop-blur-s">
+        <div className="absolute inset-4 flex flex-col justify-end border border-white/20 bg-white/10 p-6 backdrop-blur-sm">
           <h3 className="mb-4 text-3xl font-semibold text-white">
-            {item.title}
+            {t(item.title)}
           </h3>
 
           <p className="max-w-72 text-sm leading-7 text-white/90">
-            {item.description}
+            {t(item.description)}
           </p>
 
           <span className="mt-6 w-fit border-b border-white/40 pb-1 text-sm text-white transition duration-300 group-hover:border-white">
-            Read More
+            {t('more')}
           </span>
         </div>
       </div>
@@ -158,6 +155,8 @@ function DesktopCard({
 }: {
   item: CardItem;
 }) {
+  const t = useTranslations('states');
+
   return (
     <div className="grid grid-cols-2">
       <Link
@@ -174,8 +173,8 @@ function DesktopCard({
       </Link>
 
       <TextCard
-        title={item.title}
-        description={item.description}
+        title={t(item.title)}
+        description={t(item.description)}
         href={item.href}
         cardBg={item.cardBg}
         cardHover={item.cardHover}
@@ -185,13 +184,15 @@ function DesktopCard({
 }
 
 export default function EditorialGrid() {
+  const t = useTranslations('states');
+  
   return (
     <section className="bg-[#f3f3f3] px-4 py-16 md:px-8 md:py-24">
       <div className="mx-auto max-w-7xl">
         {/* SECTION TITLE */}
         <div className="mb-14">
           <h2 className="text-center text-5xl font-semibold tracking-tight text-black md:text-7xl">
-            Стани
+            {t('title')}
           </h2>
         </div>
 
@@ -220,8 +221,8 @@ export default function EditorialGrid() {
               </Link>
 
               <TextCard
-                title={item.title}
-                description={item.description}
+                title={t(item.title)}
+                description={t(item.description)}
                 href={item.href}
                 cardBg={item.cardBg}
                 cardHover={item.cardHover}

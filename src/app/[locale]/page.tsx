@@ -8,8 +8,10 @@ export default function HomePage() {
     <main>
       <HeroSection />
       <StatesSection />
-      <StickySplitHero />
-      <FashionPromoSection />
+      <div className="relative h-[200vh]">
+        <StickySplitHero />
+        <FashionPromoSection />
+      </div>
     </main>
   );
 }

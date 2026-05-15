@@ -7,7 +7,7 @@ export default function FashionPromoSection() {
   const t = useTranslations('fashion');
 
   return (
-    <section className="w-full bg-[#f5f5f5] py-16 md:py-24 overflow-hidden">
+    <section className="relative z-10 w-full bg-[#f5f5f5] py-16 md:py-24 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="relative grid grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-10">
           {/* LEFT CARD */}
@@ -39,22 +39,25 @@ export default function FashionPromoSection() {
 
           {/* RIGHT CARD */}
           <div className="relative z-10 flex flex-col justify-start lg:pt-2">
-            <div className="max-w-md">
-              <h3 className="text-3xl font-light tracking-tight text-black md:text-5xl">
-                {t('patchesTitle')}
-              </h3>
+            {/* TEXT BLOCK */}
+            <div className="flex justify-end">
+              <div className="max-w-md text-right">
 
-              <p className="mt-6 text-base leading-7 text-neutral-700 md:text-lg">
-                {t('patchesDescription')}
-              </p>
+                <h3 className="text-3xl font-light tracking-tight text-black md:text-5xl">
+                  {t('patchesTitle')}
+                </h3>
 
-              <button className="group mt-6 inline-flex items-center gap-2 text-base text-black">
-                <span className="relative">
-                  {t('patchesButton')}
-                  <span className="absolute -bottom-1 left-0 h-1 w-full bg-[#0c0c0c]" />
-                </span>
+                <p className="mt-6 text-base leading-7 text-neutral-700 md:text-lg">
+                  {t('patchesDescription')}
+                </p>
 
-              </button>
+                <button className="group mt-6 inline-flex items-center gap-2 text-base text-black">
+                  <span className="relative">
+                    {t('patchesButton')}
+                    <span className="absolute -bottom-1 left-0 h-1 w-full bg-[#0c0c0c]" />
+                  </span>
+                </button>
+              </div>
             </div>
 
             <div className="mt-8 overflow-hidden">

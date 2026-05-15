@@ -11,6 +11,27 @@
     "subTitle": "I don’t create objects — I create states.",
     "description": "Each piece is deeply lived through and personally guided by the author."
   },
+  "states": {
+    "title": "States",
+    "fireTitle": "FIRE",
+    "fireDescription": "FIRE / DEMONS / PSYCHOLOGY",
+    "waterTitle": "WATER",
+    "waterDescription": "THE SUBCONSCIOUS",
+    "airTitle": "AIR",
+    "airDescription": "BREATH",
+    "earthTitle": "EARTH",
+    "earthDescription": "BODY AS LANDSCAPE",
+    "more": "More"
+  },
+  "process": {
+    "title": "Creation",
+    "process": "Processes",
+    "ideas": "Ideas",
+    "insperation": "Insperations",
+    "actions": "Actions",
+    "influence": "Influences",
+    "more": "More"
+  },
   "fashion": {
     "accessoriesTitle": "Elegant Accessories",
     "accessoriesButton": "Explore",

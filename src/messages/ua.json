@@ -11,6 +11,27 @@
     "subTitle": "Я створюю не об’єкти — я створюю стани.",
     "description": "Кожна робота є глибоко прожитою та особисто проведеною автором."
   },
+  "states": {
+    "title": "Стани",
+    "fireTitle": "Вогонь",
+    "fireDescription": "Психологія, демони",
+    "waterTitle": "Вода",
+    "waterDescription": "Вода",
+    "airTitle": "Повітря",
+    "airDescription": "Повітря",
+    "earthTitle": "Земля",
+    "earthDescription": "Земля",
+    "more": "Більше"
+  },
+  "process": {
+    "title": "Створення",
+    "process": "Процес",
+    "ideas": "Ідеї",
+    "insperation": "Натхнення",
+    "actions": "Події",
+    "influence": "Вплив",
+    "more": "Більше"
+  },
   "fashion": {
     "accessoriesTitle": "Витончені аксесуари",
     "accessoriesButton": "Обрати",
