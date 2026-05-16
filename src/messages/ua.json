@@ -1,10 +1,24 @@
 {
+  "footer": {
+    "title": "Я створюю не об’єкти — я створюю стани.",
+    "button": "Слідкувати",
+    "brand": "ADELAIDA",
+    "copyright": "AKCENTRA®"
+  },
   "navigation": {
+    "title": "Мапа",
+    "collections": "Колекції",
     "home": "Головна",
     "gallery": "Галерея",
     "ideas": "Ідеї",
-    "accessories": "Аксесуари",
-    "patches": "Патчі"
+    "fire": "Вогонь",
+    "water": "Вода",
+    "air": "Повітря",
+    "earth": "Земля",
+    "states": "Стани",
+    "process": "Створення",
+    "patches": "Патчі",
+    "accessories": "Аксесуари"
   },
   "hero": {
     "title": "Мультидисциплінарна художниця",

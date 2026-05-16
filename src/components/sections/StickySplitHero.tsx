@@ -6,11 +6,11 @@ export default function StickySplitHero() {
   const t = useTranslations('process');
 
   return (
-    <section className="sticky top-0 h-screen overflow-hidden">
+    <section className="relative h-screen overflow-hidden">
       <div className="grid h-full grid-cols-2 ">
-        <div className="relative">
+        <div className="relative h-full">
           <Image
-            src="https://res.cloudinary.com/dbiudjxuw/image/upload/f_auto,q_auto/create_mask_process_craft_cojqed"
+            src="https://res.cloudinary.com/dbiudjxuw/image/upload/w_1200,h_1600,c_fill/create_mask_process_craft_cojqed"
             alt="craft"
             fill
             className="object-cover"
@@ -19,19 +19,18 @@ export default function StickySplitHero() {
           />
         </div>
 
-        <div className="relative">
+        <div className="relative h-full">
           <Image
-            src="https://res.cloudinary.com/dbiudjxuw/image/upload/f_auto,q_auto/create_mask_process_paiting_tt7xuq"
+            src="https://res.cloudinary.com/dbiudjxuw/image/upload/w_1200,h_1600,c_fill/create_mask_process_paiting_tt7xuq"
             alt="painting"
             fill
             className="object-cover"
-            priority
             sizes="50vw"
           />
         </div>
       </div>
 
-      <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-black/30" />
 
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center text-white">

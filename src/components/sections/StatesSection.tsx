@@ -187,7 +187,7 @@ export default function EditorialGrid() {
   const t = useTranslations('states');
   
   return (
-    <section className="bg-[#f3f3f3] px-4 py-16 md:px-8 md:py-24">
+    <section className="bg-[#e9e9e9] px-4 py-16 md:px-8 md:py-24">
       <div className="mx-auto max-w-7xl">
         {/* SECTION TITLE */}
         <div className="mb-14">

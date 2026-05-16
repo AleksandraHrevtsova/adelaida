@@ -5,5 +5,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+
+  return (
+    <html suppressHydrationWarning>
+      <body suppressHydrationWarning className='min-h-full flex flex-col'>
+        {children}
+      </body>
+    </html>
+  );
 }

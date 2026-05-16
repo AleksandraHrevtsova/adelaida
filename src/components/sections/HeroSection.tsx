@@ -14,7 +14,7 @@ export default function HeroSection() {
         {/* LEFT SIDE */}
         <div className='flex flex-col justify-between bg-[#3f3f3f] px-6 py-8 text-white sm:px-10 sm:py-10 lg:px-16 lg:py-14'>
           {/* TOP NAV */}
-          <div className='flex justify-between'>
+          <div className='flex justify-end'>
             <div className='flex gap-2 text-sm sm:text-base'>
               <Link
                 href='/en'
@@ -25,26 +25,6 @@ export default function HeroSection() {
                 href='/ua'
                 className='transition-opacity duration-300 hover:opacity-70'
               >UA</Link>
-            </div>
-
-            <div className='flex gap-3'>
-              <Link
-                href='https://www.instagram.com/adelaida_art_mask'
-                target='_blank'
-                className='transition-opacity duration-300 hover:opacity-70'
-              >
-                Instagram
-              </Link>
-
-              <span>/</span>
-
-              <Link
-                href='https://www.facebook.com/adelaidaartmask'
-                target='_blank'
-                className='transition-opacity duration-300 hover:opacity-70'
-              >
-                Facebook
-              </Link>
             </div>
           </div>
 
@@ -60,7 +40,28 @@ export default function HeroSection() {
 
           {/* FOOTER LINKS */}
           <div className='flex flex-col gap-4 text-sm sm:flex-row sm:items-center sm:justify-between sm:text-base'>
-            <div className='flex gap-3'>
+            <div className='flex flex-col'>
+              <div className='w-full flex gap-3'>
+                <Link
+                  href='https://www.instagram.com/adelaida_art_mask'
+                  target='_blank'
+                  className='transition-opacity duration-300 hover:opacity-70'
+                >
+                  Instagram
+                </Link>
+
+                <span>/</span>
+
+                <Link
+                  href='https://www.facebook.com/adelaidaartmask'
+                  target='_blank'
+                  className='transition-opacity duration-300 hover:opacity-70'
+                >
+                  Facebook
+                </Link>
+
+              </div>
+
               <span className='max-w-[20ch] text-[clamp(2rem,3vw,1.5rem)] leading-[1.3] tracking-[-0.01em] text-white/80'>
                 {t('title')}
               </span>
@@ -80,8 +81,8 @@ export default function HeroSection() {
           />
 
           {/* NAME */}
-          <div className='absolute bottom-6 left-6 z-10 sm:bottom-10 sm:left-10 lg:bottom-14 lg:left-14'>
-            <h2 className='text-[56px] font-black uppercase leading-[0.9] tracking-tighter text-white sm:text-[90px] md:text-[110px] lg:text-[120px] xl:text-[140px]'>
+          <div className='absolute bottom-6 left-5 z-10 sm:bottom-10 sm:left-10 lg:bottom-14 lg:left-14'>
+            <h2 className='text-[80px] font-black uppercase leading-[0.9] tracking-tighter text-white sm:text-[110px] md:text-[120px] lg:text-[120px] xl:text-[120px]'>
               Adelaida
             </h2>
           </div>

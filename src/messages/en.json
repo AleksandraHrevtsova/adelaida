@@ -1,10 +1,24 @@
 {
+  "footer": {
+    "title": "I don’t create objects — I create states.",
+    "button": "Subscribe",
+    "brand": "ADELAIDA",
+    "copyright": "AKCENTRA®"
+  },
   "navigation": {
+    "title": "Тavigation",
+    "collections": "Collections",
     "home": "Home",
     "gallery": "Gallery",
     "ideas": "Ideas",
-    "accessories": "Accessories",
-    "patches": "Patches"
+    "fire": "Fire",
+    "water": "Water",
+    "air": "Air",
+    "earth": "Earth",
+    "states": "States",
+    "process": "Creation",
+    "patches": "Patches",
+    "accessories": "Accessories"
   },
   "hero": {
     "title": "Multidisciplinary Artist",
