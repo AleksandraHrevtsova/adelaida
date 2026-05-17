@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 type CardItem = {
   id: number;
@@ -23,7 +23,7 @@ const items: CardItem[] = [
     description: 'fireDescription',
     image: 'https://res.cloudinary.com/dbiudjxuw/image/upload/f_auto,q_auto/states_fire_desire_wzvezj',
       // 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop',
-    href: '/gallery/fire',
+    href: '/collections/fire',
     overlay: 'bg-red-200/35',
     cardBg: 'bg-red-200/20',
     cardHover: 'hover:bg-red-300/85',
@@ -35,7 +35,8 @@ const items: CardItem[] = [
     description: 'waterDescription',
     image: 'https://res.cloudinary.com/dbiudjxuw/image/upload/f_auto,q_auto/states_fire_desire_wzvezj',
       // 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
-    href: '/gallery/water',
+    // href: '/collections/water',
+    href: '/collections/fire',
     overlay: 'bg-cyan-200/35',
     cardBg: 'bg-cyan-200/20',
     cardHover: 'hover:bg-cyan-300/85',
@@ -47,8 +48,8 @@ const items: CardItem[] = [
     description: 'airDescription',
     image: 'https://res.cloudinary.com/dbiudjxuw/image/upload/f_auto,q_auto/states_fire_desire_wzvezj',
       // 'https://images.unsplash.com/photo-1511988617509-a57c8a288659?q=80&w=1200&auto=format&fit=crop',
-    href: '/gallery/air',
-
+    // href: '/collections/air',
+    href: '/collections/fire',
     overlay: 'bg-sky-200/35',
     cardBg: 'bg-sky-200/20',
     cardHover: 'hover:bg-sky-300/85',
@@ -60,7 +61,8 @@ const items: CardItem[] = [
     description: 'earthDescription',
     image: 'https://res.cloudinary.com/dbiudjxuw/image/upload/f_auto,q_auto/states_fire_desire_wzvezj',
       // 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop',
-    href: '/gallery/earth',
+    // href: '/collections/earth',
+    href: '/collections/fire',
     overlay: 'bg-black/20',
     cardBg: 'bg-black/20',
     cardHover: 'hover:bg-black/30',
@@ -114,10 +116,11 @@ function MobileOverlayCard({
 }: {
   item: CardItem;
 }) {
+  const locale = useLocale();
   const t = useTranslations('states');
   return (
     <Link
-      href={item.href}
+      href={'/' + locale + item.href}
       className="group relative block cursor-pointer overflow-hidden"
     >
       <div className="relative h-130 overflow-hidden">
@@ -156,11 +159,11 @@ function DesktopCard({
   item: CardItem;
 }) {
   const t = useTranslations('states');
-
+  const locale = useLocale();
   return (
     <div className="grid grid-cols-2">
       <Link
-        href={item.href}
+        href={'/' + locale + item.href}
         className="group relative block h-105 cursor-pointer overflow-hidden"
       >
         <Image
@@ -175,7 +178,7 @@ function DesktopCard({
       <TextCard
         title={t(item.title)}
         description={t(item.description)}
-        href={item.href}
+        href={'/' + locale + item.href}
         cardBg={item.cardBg}
         cardHover={item.cardHover}
       />
@@ -185,7 +188,7 @@ function DesktopCard({
 
 export default function EditorialGrid() {
   const t = useTranslations('states');
-  
+  const locale = useLocale();
   return (
     <section className="bg-[#e9e9e9] px-4 py-16 md:px-8 md:py-24">
       <div className="mx-auto max-w-7xl">
@@ -208,7 +211,7 @@ export default function EditorialGrid() {
           {items.map((item) => (
             <div key={item.id} className="grid grid-cols-2">
               <Link
-                href={item.href}
+                href={'/' + locale + item.href}
                 className="group relative block h-105 cursor-pointer overflow-hidden"
               >
                 <Image
@@ -223,7 +226,7 @@ export default function EditorialGrid() {
               <TextCard
                 title={t(item.title)}
                 description={t(item.description)}
-                href={item.href}
+                href={'/' + locale + item.href}
                 cardBg={item.cardBg}
                 cardHover={item.cardHover}
               />

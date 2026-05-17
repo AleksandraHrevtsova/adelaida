@@ -1,7 +1,9 @@
 'use client';
-
-import Image from 'next/image';
 import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowLeft } from 'lucide-react';
+import { useLocale } from 'next-intl';
 
 import type { Artwork, Collection } from '@/data/collections';
 import ArtworkModal from './ArtworkModal';
@@ -14,8 +16,36 @@ export default function CollectionPage({ collection }: Props) {
   const [selectedArtwork, setSelectedArtwork] =
     useState<Artwork | null>(null);
 
+    const locale = useLocale();
+
     return (
       <main className="bg-[#e9e9e9] text-black">
+        <Link
+          href={`/${locale}`}
+          className="
+            fixed left-5 top-5 z-50
+            flex items-center gap-3
+            text-black/70
+            transition-opacity duration-300
+            hover:opacity-60
+            md:left-8 md:top-8
+            lg:left-12 lg:top-12
+          "
+        >
+          <ArrowLeft
+            className="h-10 w-10 stroke-[1]"
+          />
+
+          <span
+            className="
+              hidden
+              text-sm uppercase tracking-[0.25em]
+              md:block
+            "
+          >
+            назад
+          </span>
+        </Link>
         {/* HERO */}
         <section className="px-5 pt-32 pb-16 md:px-8 lg:px-12 lg:pt-40 lg:pb-24">
           <div className="max-w-400 mx-auto">
