@@ -26,7 +26,48 @@
     "description": "Each piece is deeply lived through and personally guided by the author."
   },
   "states": {
+    "fire": {
+      "title": "Маски колекції DEMONS",
+      "description": "Вогонь тут не руйнування, а первинна енергія психіки. Протягом життя людина носить безліч соціальних масок, приховуючи одну з найважливіших частин себе — тінь. Усе, що вважається небезпечним, сороміцьким, незручним або неприйнятним, витісняється всередину. Але тінь не зникає. Невизнана, вона стає руйнівною. Демони цієї колекції — не релігійні істоти, а архетипи людської психіки: бажання, лють, сором, влада, страх, вразливість, інстинкт. Ці маски не про перетворення на демона. Вони про зустріч із ним. Про визнання того, що зазвичай заборонено визнавати. Світло без визнання тіні стає лицемірним. Тінь, замкнена у темряві, стає небезпечною. Колекція досліджує внутрішню напругу між пригніченням і прийняттям. Баланс виникає не через контроль, а через усвідомлення.",
+      "threshold": {
+        "title": "Threshold",
+        "subtitle": "«Кожен перехід вимагає зустрічі з тим, хто охороняє вхід»",
+        "description": "Архетип внутрішнього опору. Ціна трансформації."
+      },
+      "desire": {
+        "title": "Desire",
+        "subtitle": "«Бажання завжди знає, куди ми боїмося дивитися»",
+        "description": "Маска потягу, інстинкту та внутрішнього голоду."
+      },
+      "rage": {
+        "title": "Rage",
+        "subtitle": "«Те, що пригнічується найдовше, повертається найгучніше»",
+        "description": "Архетип руйнівної сили та захисту одночасно."
+      },
+      "witness": {
+        "title": "The Witness",
+        "subtitle": "«Справжнє бачення починається після втрати ілюзій»",
+        "description": "Фігура внутрішнього спостерігача та памʼяті."
+      },
+      "shame": {
+        "title": "Shame",
+        "subtitle": "«Сором народжується там, де людина перестає дивитися на себе з любовʼю»",
+        "description": "Архетип прихованості та страху бути побаченим."
+      },
+      "illusion": {
+        "title": "Illusion",
+        "subtitle": "«Маска, яка виглядає найбезпечнішою, часто приховує порожнечу»",
+        "description": "Проекція образу, створеного для світу."
+      },
+      "emptiness": {
+        "title": "Emptiness",
+        "subtitle": "«Після руйнування всіх ролей залишається лише тиша»",
+        "description": "Фінальна точка зустрічі із собою."
+      }
+
+    },
     "title": "States",
+    "description": "The “STATES” cycle consists of four mask collections exploring the human condition through the elements: fire, earth, water, and air. The mask is one of the oldest artistic and ritual objects. It does not conceal — it reveals an inner state.\n\nEach element appears not as a force of nature, but as a psychological condition and a stage of inner transformation:\n— fire — confrontation with the shadow;\n— earth — a return to the body and materiality;\n— water — immersion into the subconscious and the loss of stable identity;\n— air — the dissolution of form and transition into pure state.\n\n“STATES” presents the human being not as a fixed identity, but as a shifting system of states. Each element destroys the previous form, transforming identity in the process.\n\nThe masks are created from papier-mâché combined with natural materials and textiles. Recycled paper becomes a metaphor for processed experience, memory, and repressed states. The visible fibers and irregular textures of the material remain as scars of lived experience.\n\nThese objects are not decorative or festival masks. They are created for contemplation, inner dialogue, and encounters with archetypal human states.\n\nThe collection is limited to seven masks. Seven is a number associated with transition and inner initiation. Each mask represents a distinct archetype and a distinct state of transformation.",
     "fireTitle": "FIRE",
     "fireDescription": "FIRE / DEMONS / PSYCHOLOGY",
     "waterTitle": "WATER",

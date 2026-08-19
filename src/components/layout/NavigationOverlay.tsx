@@ -42,15 +42,15 @@ export default function NavigationOverlay({
       label: t('states'),
     },
     {
-      href: '/process',
+      href: '#/process',
       label: t('process'),
     },
     {
-      href: '/patches',
+      href: '#/fashion',
       label: t('patches'),
     },
     {
-      href: '/accessories',
+      href: '#/fashion',
       label: t('accessories'),
     },
   ];

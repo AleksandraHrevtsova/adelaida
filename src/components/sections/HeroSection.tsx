@@ -1,9 +1,9 @@
-'use client';
-
-import Image from 'next/image';
-import Link from 'next/link';
-
 import { useTranslations } from 'next-intl';
+
+import NavigationMenu from '@/components/layout/NavigationMenu';
+import Link from '@/components/ui/Link';
+import ResponsiveImage from '@/components/ui/ResponsiveImage';
+import { images } from '@/data/images';
 
 export default function HeroSection() {
   const t = useTranslations('hero');
@@ -12,19 +12,13 @@ export default function HeroSection() {
     <section className='min-h-screen bg-white'>
       <div className='grid min-h-screen grid-cols-1 lg:grid-cols-2'>
         {/* LEFT SIDE */}
-        <div className='flex flex-col justify-between bg-[#3f3f3f] px-6 py-8 text-white sm:px-10 sm:py-10 lg:px-16 lg:py-14'>
+        <NavigationMenu />
+        <div className='flex flex-col justify-between bg-[#1f0101] px-6 py-8 text-white sm:px-10 sm:py-10 lg:px-16 lg:py-14'>
           {/* TOP NAV */}
           <div className='flex justify-end'>
             <div className='flex gap-2 text-sm sm:text-base'>
-              <Link
-                href='/en'
-                className='transition-opacity duration-300 hover:opacity-70'
-              >EN</Link>
-
-              <Link
-                href='/ua'
-                className='transition-opacity duration-300 hover:opacity-70'
-              >UA</Link>
+              <Link label='EN' path='/en' />
+              <Link label='UA' path='/ua' />
             </div>
           </div>
 
@@ -42,24 +36,9 @@ export default function HeroSection() {
           <div className='flex flex-col gap-4 text-sm sm:flex-row sm:items-center sm:justify-between sm:text-base'>
             <div className='flex flex-col'>
               <div className='w-full flex gap-3'>
-                <Link
-                  href='https://www.instagram.com/adelaida_art_mask'
-                  target='_blank'
-                  className='transition-opacity duration-300 hover:opacity-70'
-                >
-                  Instagram
-                </Link>
-
+                <Link label='Instagram' path='https://www.instagram.com/adelaida_art_mask' isBlank />
                 <span>/</span>
-
-                <Link
-                  href='https://www.facebook.com/adelaidaartmask'
-                  target='_blank'
-                  className='transition-opacity duration-300 hover:opacity-70'
-                >
-                  Facebook
-                </Link>
-
+                <Link label='Facebook' path='https://www.facebook.com/adelaidaartmask' isBlank />
               </div>
 
               <span className='max-w-[20ch] text-[clamp(2rem,3vw,1.5rem)] leading-[1.3] tracking-[-0.01em] text-white/80'>
@@ -71,13 +50,11 @@ export default function HeroSection() {
 
         {/* RIGHT SIDE */}
         <div className='relative min-h-[70vh] lg:min-h-screen'>
-          <Image
-            src='/images/hero-image-lg.jpg'
-            alt='Hero artwork'
-            fill
+          <ResponsiveImage
+            src={images.hero.src}
+            alt={images.hero.alt}
+            fill={true}
             priority
-            className='object-cover'
-            sizes='(max-width: 1024px) 100vw, 50vw'
           />
 
           {/* NAME */}

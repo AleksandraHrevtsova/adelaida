@@ -61,8 +61,6 @@ export default async function LocaleLayout({
   const messages = await getMessages({ locale });
 
   return (
-    // <html lang={locale} className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-    //   <body suppressHydrationWarning className='min-h-full flex flex-col'>
     <NextIntlClientProvider messages={messages}>
       <div
         lang={locale}

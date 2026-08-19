@@ -2,14 +2,11 @@ import HeroSection from '@/components/sections/HeroSection';
 import StatesSection from '@/components/sections/StatesSection';
 import StickySplitHero from '@/components/sections/StickySplitHero';
 import FashionPromoSection from '@/components/sections/FashionPromoSection';
-
 import Footer from '@/components/layout/Footer';
-import NavigationMenu from '@/components/layout/NavigationMenu';
 
 export default function HomePage() {
   return (
     <>
-      <NavigationMenu />
       <main>
         <HeroSection />
         <StatesSection />

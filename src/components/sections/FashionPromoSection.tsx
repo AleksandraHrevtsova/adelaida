@@ -1,12 +1,12 @@
-'use client';
-
 import Image from "next/image";
 import { useTranslations } from 'next-intl';
+// import Section from '@/components/ui/Section';
 
 export default function FashionPromoSection() {
   const t = useTranslations('fashion');
 
   return (
+    // <Section></Section>
     <section className="w-full bg-[#e9e9e9] py-16 md:py-24 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="relative grid grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-10">

@@ -1,9 +1,13 @@
 'use client';
+
 import { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { useLocale, useTranslations } from 'next-intl';
+
 import { ArrowLeft } from 'lucide-react';
-import { useLocale } from 'next-intl';
+import Image from 'next/image';
+import Link from '@/components/ui/Link';
+import ResponsiveImage from '@/components/ui/ResponsiveImage';
+import { images } from '@/data/images';
 
 import type { Artwork, Collection } from '@/data/collections';
 import ArtworkModal from './ArtworkModal';
@@ -17,32 +21,22 @@ export default function CollectionPage({ collection }: Props) {
     useState<Artwork | null>(null);
 
     const locale = useLocale();
+    const t = useTranslations();
 
     return (
       <main className="bg-[#e9e9e9] text-black">
         <Link
-          href={`/${locale}`}
+          path={`/${locale}`}
           className="
             fixed left-5 top-5 z-50
             flex items-center gap-3
             text-black/70
-            transition-opacity duration-300
-            hover:opacity-60
             md:left-8 md:top-8
             lg:left-12 lg:top-12
           "
         >
-          <ArrowLeft
-            className="h-10 w-10 stroke-[1]"
-          />
-
-          <span
-            className="
-              hidden
-              text-sm uppercase tracking-[0.25em]
-              md:block
-            "
-          >
+          <ArrowLeft className="h-10 w-10 stroke-1" />
+          <span className=" hidden text-sm uppercase tracking-[0.25em] md:block">
             назад
           </span>
         </Link>
@@ -50,7 +44,7 @@ export default function CollectionPage({ collection }: Props) {
         <section className="px-5 pt-32 pb-16 md:px-8 lg:px-12 lg:pt-40 lg:pb-24">
           <div className="max-w-400 mx-auto">
             <h1 className="max-w-6xl text-5xl uppercase leading-none tracking-wide md:text-7xl lg:text-[110px]">
-              {collection.title}
+              {t(collection.title)}
             </h1>
           </div>
         </section>
@@ -72,9 +66,13 @@ export default function CollectionPage({ collection }: Props) {
                       ${index % 3 === 2 ? 'aspect-5/4' : ''}
                     `}
                   >
+                    {/* <ResponsiveImage
+                      src={images.image}
+
+                    /> */}
                     <Image
                       src={artwork.image}
-                      alt={artwork.title}
+                      alt={t(artwork.title)}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -92,7 +90,7 @@ export default function CollectionPage({ collection }: Props) {
                       "
                     >
                       <h2 className=" text-2xl uppercase tracking-wide text-white md:text-3xl">
-                        {artwork.title}
+                        {t(artwork.title)}
                       </h2>
                     </div>
                   </div>

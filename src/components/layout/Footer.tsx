@@ -1,8 +1,9 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import ResponsiveImage from '@/components/ui/ResponsiveImage';
+import { images } from '@/data/images';
 
 export default function Footer() {
   const t = useTranslations('footer');
@@ -39,9 +40,9 @@ export default function Footer() {
 
           {/* IMAGE */}
           <div className='relative min-h-75 lg:min-h-130'>
-            <Image
-              src='https://res.cloudinary.com/dbiudjxuw/image/upload/f_auto,q_auto/sun-mask-footer_nwrbta'
-              alt='footer mask'
+            <ResponsiveImage
+              src={images.footer.src}
+              alt={images.footer.alt}
               fill
               sizes='(max-width: 1024px) 100vw, 50vw'
               className='object-cover'

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import type { Artwork } from '@/data/collections';
-
+import { useLocale, useTranslations } from 'next-intl';
 type Props = {
   artwork: Artwork | null;
   onCloseAction: () => void;
@@ -14,6 +14,7 @@ export default function ArtworkModal({
   artwork,
   onCloseAction,
 }: Props) {
+  const t = useTranslations();
   return (
     <AnimatePresence>
       {artwork && (
@@ -36,8 +37,7 @@ export default function ArtworkModal({
             <div className="relative h-[60vh] lg:h-full">
               <Image
                 src={artwork.image}
-                alt={artwork.title}
-                fill
+                alt={t(artwork.title)}
                 className="object-cover"
                 priority
               />
@@ -47,14 +47,14 @@ export default function ArtworkModal({
             <div className="flex flex-col justify-center px-6 py-10 text-white md:px-10 lg:px-16">
               <h2
                 className="mb-8 text-4xl uppercase tracking-wide md:text-6xl">
-                {artwork.title}
+                {t(artwork.title)}
               </h2>
               <p className="mb-6 text-xl leading-relaxed text-white/80 md:text-2xl">
-                {artwork.subtitle}
+                {t(artwork.subtitle)}
               </p>
               <p
                 className="max-w-xl text-lg leading-relaxed text-white/70 md:text-xl">
-                {artwork.description}
+                {t(artwork.description)}
               </p>
             </div>
           </div>
