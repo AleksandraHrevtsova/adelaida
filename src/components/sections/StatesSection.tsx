@@ -5,6 +5,7 @@ import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { images, type StateName } from '@/data/images';
 import type { CloudinaryImage } from '@/lib/cloudinary';
+import { routes } from '@/constants/routes';
 
 type CardItem = {
   state: StateName;
@@ -15,7 +16,7 @@ type CardItem = {
 const items: CardItem[] = (Object.keys(images.states) as StateName[]).map((state) => ({
     state,
     image: images.states[state].main,
-    href: `/collections/${state}`,
+    href: `${routes.collections}/${state}`,
   }),
 );
 

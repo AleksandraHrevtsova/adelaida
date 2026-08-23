@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import CollectionPage from '@/components/collections/CollectionPage';
-import { collections } from '@/data/collections';
+import { collections, isStateName } from '@/data/images';
 
 type Props = {
   params: Promise<{
@@ -13,11 +13,11 @@ export default async function CollectionSlugPage({
 }: Props) {
   const { slug } = await params;
 
-  const collection = collections[slug];
-
-  if (!collection) {
+  if (!isStateName(slug)) {
     notFound();
   }
+
+  const collection = collections[slug];
 
   return <CollectionPage collection={collection} />;
 }

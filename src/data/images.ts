@@ -89,6 +89,10 @@ function generateMainCollectionImage(stateName: StateName) {
   return cloudinaryImage(publicId, key);
 }
 
+export function isStateName(value: string): value is StateName {
+  return value in collections;
+}
+
 export const images = {
   hero: cloudinaryImage(
     'hero-image_fdbzcd',
