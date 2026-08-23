@@ -23,6 +23,7 @@ export default function Footer() {
             <button
               className='
                 mt-8
+                mb-8
                 w-fit
                 bg-[#e9e9e9]
                 text-black
@@ -36,6 +37,11 @@ export default function Footer() {
             >
               {t('button')}
             </button>
+
+            <p className='max-w-155 font-mono uppercase tracking-[0.2em] leading-[1.4]
+              text-sm md:text-base lg:text-lg'>
+              {t('description')}
+            </p>
           </div>
 
           {/* IMAGE */}
