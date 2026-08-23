@@ -5,15 +5,22 @@ type CloudinaryOptions = {
   quality?: string | number;
 };
 
+export type CloudinaryImage = {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+};
+
 const cloudinaryBase = 'https://res.cloudinary.com/dbiudjxuw/image/upload/';
 
 export function cloudinaryImage(
   publicId: string,
   alt: string,
   options: CloudinaryOptions = {},
-) {
+): CloudinaryImage {
   const {
-    width = 1400,
+    width = 1200,
     height = 1800,
     crop = 'fill',
     quality = 'auto',

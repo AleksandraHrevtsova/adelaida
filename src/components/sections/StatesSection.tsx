@@ -1,248 +1,182 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
-import { useLocale, useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
+import { images, type StateName } from '@/data/images';
+import type { CloudinaryImage } from '@/lib/cloudinary';
 
 type CardItem = {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
+  state: StateName;
+  image: CloudinaryImage;
   href: string;
-
-  overlay: string;
-  cardBg: string;
-  cardHover: string;
 };
 
-const items: CardItem[] = [
-  {
-    id: 1,
-    title: 'fireTitle',
-    description: 'fireDescription',
-    image: 'https://res.cloudinary.com/dbiudjxuw/image/upload/f_auto,q_auto/states_fire_desire_wzvezj',
-      // 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop',
-    href: '/collections/fire',
-    overlay: 'bg-red-200/35',
-    cardBg: 'bg-red-200/20',
-    cardHover: 'hover:bg-red-300/85',
-  },
+const items: CardItem[] = (Object.keys(images.states) as StateName[]).map((state) => ({
+    state,
+    image: images.states[state].main,
+    href: `/collections/${state}`,
+  }),
+);
 
-  {
-    id: 2,
-    title: 'waterTitle',
-    description: 'waterDescription',
-    image: 'https://res.cloudinary.com/dbiudjxuw/image/upload/f_auto,q_auto/v1786478910/abyss_bpbfam',
-    // image: 'https://res.cloudinary.com/dbiudjxuw/image/upload/f_auto,q_auto/states_fire_desire_wzvezj',
-      // 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
-    // href: '/collections/water',
-    href: '/collections/fire',
-    overlay: 'bg-cyan-200/35',
-    cardBg: 'bg-cyan-200/20',
-    cardHover: 'hover:bg-cyan-300/85',
-  },
+const overlayStyles: Record<StateName, string> = {
+  fire: 'bg-red-200/35',
+  water: 'bg-cyan-200/35',
+  air: 'bg-sky-200/35',
+  earth: 'bg-black/20',
+};
 
-  {
-    id: 3,
-    title: 'airTitle',
-    description: 'airDescription',
-    // image: 'https://res.cloudinary.com/dbiudjxuw/image/upload/f_auto,q_auto/states_fire_desire_wzvezj',
-      image: 'https://res.cloudinary.com/dbiudjxuw/image/upload/v1787138796/first_breath_mm2kvm.jpg',
-    // href: '/collections/air',
-    href: '/collections/fire',
-    overlay: 'bg-sky-200/35',
-    cardBg: 'bg-sky-200/20',
-    cardHover: 'hover:bg-sky-300/85',
-  },
-
-  {
-    id: 4,
-    title: 'earthTitle',
-    description: 'earthDescription',
-    image: 'https://res.cloudinary.com/dbiudjxuw/image/upload/v1781698296/earth-saturation_y38iyu.jpg',
-      // 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop',
-    // href: '/collections/earth',
-    href: '/collections/fire',
-    overlay: 'bg-black/20',
-    cardBg: 'bg-black/20',
-    cardHover: 'hover:bg-black/30',
-  },
-];
-
-function TextCard({
-  title,
-  description,
-  href,
-  cardBg,
-  cardHover,
+function CardOverlay({
+  state,
 }: {
-  title: string;
-  description: string;
-  href: string;
-
-  cardBg: string;
-  cardHover: string;
+  state: StateName;
 }) {
   const t = useTranslations('states');
+  const title = t(`${state}_title`);
+  const description = t(`${state}_description`);
 
   return (
-    <Link
-      href={href}
+    <div
       className={`
-        group flex h-full cursor-pointer flex-col justify-center
-        p-8 md:p-10
-        transition-all duration-500
-        ${cardBg}
-        ${cardHover}
+        absolute inset-4
+        flex flex-col justify-end
+        border border-white/20
+        bg-white/10
+        p-6
+        backdrop-blur-sm
+        opacity-0
+        transition-opacity duration-500
+        group-hover:opacity-100
       `}
     >
-      <h3 className="mb-6 text-3xl font-semibold tracking-tight text-black transition duration-300">
+      <h3 className="mb-4 text-3xl font-semibold text-white">
         {title}
       </h3>
 
-      <p className="max-w-60 text-base leading-8 text-black/80 transition duration-300">
+      <p className="max-w-72 text-sm leading-7 text-white/90">
         {description}
       </p>
 
-      <span className="mt-10 w-fit border-b border-black/30 pb-1 text-lg text-black transition duration-300 group-hover:border-black">
+      <span className="mt-6 w-fit border-b border-white/40 pb-1 text-sm text-white transition-colors duration-300 group-hover:border-white">
         {t('more')}
       </span>
-    </Link>
+    </div>
   );
 }
 
-function MobileOverlayCard({
-  item,
-}: {
-  item: CardItem;
-}) {
-  const locale = useLocale();
-  const t = useTranslations('states');
+function StateCard({ item }: { item: CardItem }) {
+  const overlay = overlayStyles[item.state];
+
   return (
     <Link
-      href={'/' + locale + item.href}
-      className="group relative block cursor-pointer overflow-hidden"
+      href={item.href}
+      className="
+        group
+        relative
+        block
+        cursor-pointer
+        overflow-hidden
+      "
     >
-      <div className="relative h-130 overflow-hidden">
-        <Image
-          src={item.image}
-          alt={item.title}
-          fill
-          className="object-cover transition duration-700 group-hover:scale-105"
-          sizes="100vw"
-        />
-
-        <div className={`absolute inset-0 ${item.overlay}`} />
-
-        {/* overlay card */}
-        <div className="absolute inset-4 flex flex-col justify-end border border-white/20 bg-white/10 p-6 backdrop-blur-sm">
-          <h3 className="mb-4 text-3xl font-semibold text-white">
-            {t(item.title)}
-          </h3>
-
-          <p className="max-w-72 text-sm leading-7 text-white/90">
-            {t(item.description)}
-          </p>
-
-          <span className="mt-6 w-fit border-b border-white/40 pb-1 text-sm text-white transition duration-300 group-hover:border-white">
-            {t('more')}
-          </span>
-        </div>
-      </div>
-    </Link>
-  );
-}
-
-function DesktopCard({
-  item,
-}: {
-  item: CardItem;
-}) {
-  const t = useTranslations('states');
-  const locale = useLocale();
-  return (
-    <div className="grid grid-cols-2">
-      <Link
-        href={'/' + locale + item.href}
-        className="group relative block h-105 cursor-pointer overflow-hidden"
+      {/* Image */}
+      <div
+        className="
+          relative
+          w-full
+          overflow-hidden
+          bg-black
+        "
       >
         <Image
-          src={item.image}
-          alt={item.title}
-          fill
-          className="object-cover transition duration-700 group-hover:scale-105"
-          sizes="(max-width: 1200px) 50vw, 25vw"
+          src={item.image.src}
+          alt={item.image.alt}
+          width={item.image.width}
+          height={item.image.height}
+          className="
+            block
+            h-auto
+            w-full
+            object-contain
+            transition-transform
+            duration-700
+            group-hover:scale-105
+          "
+          sizes="
+            (max-width: 767px) 100vw,
+            (max-width: 1279px) 50vw,
+            25vw
+          "
         />
-      </Link>
+      </div>
 
-      <TextCard
-        title={t(item.title)}
-        description={t(item.description)}
-        href={'/' + locale + item.href}
-        cardBg={item.cardBg}
-        cardHover={item.cardHover}
+      {/* Dark/color overlay */}
+      <div
+        className={`
+          absolute
+          inset-0
+          ${overlay}
+          opacity-0
+          transition-opacity
+          duration-500
+          group-hover:opacity-100
+        `}
       />
-    </div>
+
+      {/* Text overlay */}
+      <CardOverlay state={item.state} />
+    </Link>
   );
 }
 
 export default function EditorialGrid() {
   const t = useTranslations('states');
-  const locale = useLocale();
+
   return (
     <section className="bg-[#e9e9e9] px-4 py-16 md:px-8 md:py-24">
       <div className="mx-auto max-w-7xl">
-        {/* SECTION TITLE */}
+        {/* Section title */}
         <div className="mb-14">
           <h2 className="text-center text-5xl font-semibold tracking-tight text-black md:text-7xl">
             {t('title')}
           </h2>
+          <p className="text-center text-xl font-semibold tracking-tight text-black md:text-2xl">
+            {t('description_top')}
+          </p>
         </div>
 
-        {/* DESKTOP */}
+        {/* Desktop */}
         <div className="hidden lg:grid lg:grid-cols-2">
           {items.map((item) => (
-            <DesktopCard key={item.id} item={item} />
-          ))}
-        </div>
-
-        {/* TABLET */}
-        <div className="hidden gap-0 md:flex md:flex-col lg:hidden">
-          {items.map((item) => (
-            <div key={item.id} className="grid grid-cols-2">
-              <Link
-                href={'/' + locale + item.href}
-                className="group relative block h-105 cursor-pointer overflow-hidden"
-              >
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover transition duration-700 group-hover:scale-105"
-                  sizes="50vw"
-                />
-              </Link>
-
-              <TextCard
-                title={t(item.title)}
-                description={t(item.description)}
-                href={'/' + locale + item.href}
-                cardBg={item.cardBg}
-                cardHover={item.cardHover}
-              />
-            </div>
-          ))}
-        </div>
-
-        {/* MOBILE */}
-        <div className="flex flex-col gap-6 md:hidden">
-          {items.map((item) => (
-            <MobileOverlayCard
-              key={item.id}
+            <StateCard
+              key={item.state}
               item={item}
             />
           ))}
+        </div>
+
+        {/* Tablet */}
+        <div className="hidden md:grid md:grid-cols-2 lg:hidden">
+          {items.map((item) => (
+            <StateCard
+              key={item.state}
+              item={item}
+            />
+          ))}
+        </div>
+
+        {/* Mobile */}
+        <div className="flex flex-col gap-6 md:hidden">
+          {items.map((item) => (
+            <StateCard
+              key={item.state}
+              item={item}
+            />
+          ))}
+        </div>
+        <div className="mt-14">
+          <p className="text-center text-xl font-semibold tracking-tight text-black md:text-2xl">
+            {t('description_bottom')}
+          </p>
         </div>
       </div>
     </section>
