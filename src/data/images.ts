@@ -35,6 +35,21 @@ export const imagesIds = {
       }
     },
 
+    earth: {
+      main: {
+        saturation: 'v1781698296/earth-saturation_y38iyu.jpg',
+      },
+      artworks: {
+        saturation: 'v1781698295/saturation_qdfr9r.jpg',
+        return: 'v1781698296/return_uqpjan.jpg',
+        germination: 'v1781698295/germination_uxomur.jpg',
+        mineralization: 'v1781698295/mineralization_uglan5.jpg',
+        cover: 'v1781698294/cover_ytsfzl.jpg',
+        merger: 'v1781698294/merger_fehb42.jpg',
+        weave: 'v1781698294/weave_uilz2d.jpg',
+      }
+    },
+
     water: {
       main: {
         descent: 'v1786478909/descent_suiaoe.jpg',
@@ -62,21 +77,6 @@ export const imagesIds = {
         first_breath: 'v1787138796/first_breath_mm2kvm.jpg',
         whisper: 'v1787138794/whisper_bxzsfg.jpg',
         suspension: 'v1787138796/suspension_eusa21.jpg',
-      }
-    },
-
-    earth: {
-      main: {
-        saturation: 'v1781698296/earth-saturation_y38iyu.jpg',
-      },
-      artworks: {
-        saturation: 'v1781698295/saturation_qdfr9r.jpg',
-        return: 'v1781698296/return_uqpjan.jpg',
-        germination: 'v1781698295/germination_uxomur.jpg',
-        mineralization: 'v1781698295/mineralization_uglan5.jpg',
-        cover: 'v1781698294/cover_ytsfzl.jpg',
-        merger: 'v1781698294/merger_fehb42.jpg',
-        weave: 'v1781698294/weave_uilz2d.jpg',
       }
     },
   },
@@ -145,6 +145,11 @@ export const images = {
       collection: generateCollection('fire'),
     },
 
+    earth: {
+      main: generateMainCollectionImage('earth'),
+      collection: generateCollection('earth'),
+    },
+
     water: {
       main: generateMainCollectionImage('water'),
       collection: generateCollection('water'),
@@ -153,11 +158,6 @@ export const images = {
     air: {
       main: generateMainCollectionImage('air'),
       collection: generateCollection('air'),
-    },
-
-    earth: {
-      main: generateMainCollectionImage('earth'),
-      collection: generateCollection('earth'),
     },
   },
 

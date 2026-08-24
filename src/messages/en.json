@@ -1,83 +1,274 @@
 {
-  "footer": {
-    "title": "I don’t create objects — I create states.",
-    "button": "Subscribe",
-    "brand": "ADELAIDA",
-    "copyright": "AKCENTRA®"
+  "brand": "ADELAIDA",
+  "brand_art_mask": "ADELAIDA ART MASK",
+
+  "instagram": "Instagram",
+  "instagram_short": "IG",
+  "facebook": "Facebook",
+  "facebook_short": "FB",
+
+  "subscribe": "Subscribe",
+  "back": "back",
+  "more": "More",
+  "select": "Select",
+  
+  "hero": {
+    "title": "Multidisciplinary Artist",
+    "subTitle": "I don't create objects — I create states.",
+    "description": "Through my work, I explore the inner states of the human being, the relationship between body and nature, memory, transformation, and psychological experience. For me, the mask is not a means of concealment, but a way of making visible what usually remains unspoken. Each mask is an artefact of lived experience. It is not simply created — it is lived through.",
+    "main_img_alt": "Adelaida Art Mask Author"
   },
+
   "navigation": {
-    "title": "Тavigation",
-    "collections": "Collections",
+    "title": "Navigation",
     "home": "Home",
-    "gallery": "Gallery",
-    "ideas": "Ideas",
+    "collections": "Collections",
+
+    "states": "States",
     "fire": "Fire",
     "water": "Water",
     "air": "Air",
     "earth": "Earth",
-    "states": "States",
+
     "process": "Creation",
     "patches": "Patches",
     "accessories": "Accessories"
   },
-  "hero": {
-    "title": "Multidisciplinary Artist",
-    "subTitle": "I don’t create objects — I create states.",
-    "description": "Each piece is deeply lived through and personally guided by the author."
-  },
+
   "states": {
+    "title": "STATES",
+    "description_top": "The cycle consists of four collections of masks, exploring the human condition through the four elements. The mask is one of the oldest artistic and ritual objects. It does not conceal — it reveals. Fire, earth, water and air become not representations of nature, but manifestations of inner human states. These are not decorative masks. They are archetypal states of being, expressed through matter, texture and the deformation of form. Each collection represents a distinct stage of inner movement. Fire is an encounter with the shadow and the shadow archetypes within the self. Earth is a return of the body to nature and matter. Water is a descent into the subconscious — a state in which stability and identity begin to dissolve in its depths. Air explores the disappearance of form and the transition into a state of becoming.",
+    "description_bottom": "The “STATES” series presents the human being not as a fixed identity, but as a shifting system of states. Each element destroys the previous form, transforms identity, and moves the individual into a new state of existence. It is a journey from instinct to body, depth, and ultimately the dissolution of form. Unlike decorative or festival masks, these objects are not made for entertainment. They are created for contemplation, encounter, and inner dialogue. They are artistic artefacts. Each collection consists of seven masks. Seven is a deliberately chosen structure that allows the concept to unfold in its entirety. Each mask is a distinct face of the shadow, a separate state and a process in itself.",
+
+    "fire_title": "FIRE",
+    "fire_description": "DEMONS | PSYCHOLOGY | INSTINCT | SHADOW",
+
+    "earth_title": "EARTH",
+    "earth_description": "BODY AS LANDSCAPE | MATTER | ORGANIC",
+
+    "water_title": "WATER",
+    "water_description": "THE SUBCONSCIOUS TIDE | SUBCONSCIOUS | MEMORY | ABYSS",
+
+    "air_title": "AIR",
+    "air_description": "BREATH | STATES | NERVOUS SYSTEM",
+
     "fire": {
-      "title": "Маски колекції DEMONS",
-      "description": "Вогонь тут не руйнування, а первинна енергія психіки. Протягом життя людина носить безліч соціальних масок, приховуючи одну з найважливіших частин себе — тінь. Усе, що вважається небезпечним, сороміцьким, незручним або неприйнятним, витісняється всередину. Але тінь не зникає. Невизнана, вона стає руйнівною. Демони цієї колекції — не релігійні істоти, а архетипи людської психіки: бажання, лють, сором, влада, страх, вразливість, інстинкт. Ці маски не про перетворення на демона. Вони про зустріч із ним. Про визнання того, що зазвичай заборонено визнавати. Світло без визнання тіні стає лицемірним. Тінь, замкнена у темряві, стає небезпечною. Колекція досліджує внутрішню напругу між пригніченням і прийняттям. Баланс виникає не через контроль, а через усвідомлення.",
+      "title": "FIRE. DEMONS | PSYCHOLOGY | INSTINCT | SHADOW",
+      "description": "Here, fire is not destruction, but the primal energy of the psyche. Throughout life, we wear countless social masks, concealing one of the most essential parts of ourselves — the shadow. Everything perceived as dangerous, shameful, inconvenient, or unacceptable is pushed inward. But the shadow does not disappear. Unacknowledged, it becomes destructive. The demons in this collection are not religious beings, but archetypes of the human psyche: desire, rage, shame, power, fear, vulnerability, instinct. These masks are not about becoming a demon. They are about encountering it. About acknowledging what we are usually forbidden to acknowledge. Light without recognition of the shadow becomes hypocritical. The shadow, locked in darkness, becomes dangerous. The collection explores the inner tension between repression and acceptance. Balance does not emerge through control, but through awareness.",
+
       "threshold": {
-        "title": "Threshold",
-        "subtitle": "«Кожен перехід вимагає зустрічі з тим, хто охороняє вхід»",
-        "description": "Архетип внутрішнього опору. Ціна трансформації."
+        "title": "Threshold (The Guardian)",
+        "subtitle": "“Every transition demands an encounter with the one who guards the entrance.”",
+        "description": "The Guardian confronts us with the cost of transformation. It represents the inner resistance that appears when change becomes irreversible. It does not fight or attack. It sets the conditions of the passage and demands its price. Every step beyond what is familiar requires an encounter with the one who guards the threshold. One more step, and there may be no way back.",
+        "alt": "Mask Threshold (The Guardian) from the States cycle, FIRE. DEMONS | PSYCHOLOGY | INSTINCT | SHADOW, by Adelaida"
       },
+
       "desire": {
         "title": "Desire",
-        "subtitle": "«Бажання завжди знає, куди ми боїмося дивитися»",
-        "description": "Маска потягу, інстинкту та внутрішнього голоду."
+        "subtitle": "“What moves life rarely receives permission to be seen.”",
+        "description": "Desire says: “I want.” It is the primal impulse of life, existing before rules, expectations, and social restrictions. Sexuality is its most visible and, at the same time, one of its most repressed forms of expression. When we hide our desires, we lose contact with our own energy. Desire is life force that has been denied a voice. Once we reach the threshold, a question emerges: “What do I actually want?” Without acknowledging desire, the journey cannot continue. We may pass the Guardian out of fear, duty, or morality, but the path will not truly be our own. Desire is the first honest answer we give ourselves.",
+        "alt": "Mask Desire from the States cycle, FIRE. DEMONS | PSYCHOLOGY | INSTINCT | SHADOW, by Adelaida"
       },
+
       "rage": {
         "title": "Rage",
-        "subtitle": "«Те, що пригнічується найдовше, повертається найгучніше»",
-        "description": "Архетип руйнівної сили та захисту одночасно."
+        "subtitle": "“Rage emerges where boundaries have been violated for too long.”",
+        "description": "The archetype of rage is the moment when the mask of the victim falls away. It is the moment of leaving a role behind — the sound of a voice that was never allowed to speak. We grow up in a culture that often teaches endurance, compliance, and being easy to live with. Rage arrives when we realise that we have the right to want, to refuse, to be visible and to be heard. It builds slowly, which is why it can always seem disproportionate to the moment. It comes from having endured for too long. It is a return of power — raw, unprocessed, but real. This is precisely why it can be frightening: it destroys the image of being “good” or “easy”. At its core, however, rage does not seek to destroy another person. Its purpose is to stop an intrusion. Like armour, it is a protective function. It emerges when boundaries have been violated repeatedly and systematically, rather than by accident. It is the moment when the victim stops being a victim. Rage protects desire. Without it, desire remains vulnerable. It is not chaos, and it is not simply a scream. It is the growl before action.",
+        "alt": "Mask Rage from the States cycle, FIRE. DEMONS | PSYCHOLOGY | INSTINCT | SHADOW, by Adelaida"
       },
+
       "witness": {
         "title": "The Witness",
-        "subtitle": "«Справжнє бачення починається після втрати ілюзій»",
-        "description": "Фігура внутрішнього спостерігача та памʼяті."
+        "subtitle": "“It was always there, even when no one was looking.”",
+        "description": "The Witness is the inner mirror of observation and silence. It appears when we look at ourselves and ask: “Am I truly following my own path?” The Witness is our inner archive. At first, it may seem like a light archetype, but it sees everything — fear, shame, envy, desire. It reminds us: “You cannot hide from yourself.” The Witness is the demon of observation and awareness. It does not interfere, but it reveals truths we may be afraid to see. It does not destroy. It simply makes us face what has been recorded.",
+        "alt": "Mask The Witness from the States cycle, FIRE. DEMONS | PSYCHOLOGY | INSTINCT | SHADOW, by Adelaida"
       },
+
       "shame": {
         "title": "Shame",
-        "subtitle": "«Сором народжується там, де людина перестає дивитися на себе з любовʼю»",
-        "description": "Архетип прихованості та страху бути побаченим."
+        "subtitle": "“This is where another’s gaze becomes internal.”",
+        "description": "Shame is the shadow that runs through all the archetypes. It conceals desire, restrains rage, obscures memory, and makes it difficult to acknowledge the cost of crossing a threshold. But shame is not an enemy if we acknowledge it rather than suppress or hide it, giving it a place within us. Just as acknowledging that we are afraid can make fear easier to bear, shame also needs to be recognised. Recognition makes it constructive rather than destructive. Shame does not destroy us directly, but it makes self-expression costly and difficult. By moving through shame, we remove limitations and open the possibility of fully expressing ourselves. Only then do we gain freedom.",
+        "alt": "Mask Shame from the States cycle, FIRE. DEMONS | PSYCHOLOGY | INSTINCT | SHADOW, by Adelaida"
       },
+
       "illusion": {
         "title": "Illusion",
-        "subtitle": "«Маска, яка виглядає найбезпечнішою, часто приховує порожнечу»",
-        "description": "Проекція образу, створеного для світу."
+        "subtitle": "“A mask worn for survival eventually begins to call itself ‘I’.”",
+        "description": "The mask of social roles through which we interact with the world. Recognising the mask allows us to see ourselves more clearly and free ourselves from illusion. The mask cannot simply be hidden or ignored. It is part of our psyche, part of the shadow through which we engage with the world. To hide it and refuse to acknowledge it means living through unconscious roles, confusing where the self ends and the mask begins, and blocking access to the authentic self. Acceptance means recognising the role as a tool rather than an identity. This is the most elusive mask. It does not scream, it does not hurt, it does not forbid. It substitutes.",
+        "alt": "Mask Illusion from the States cycle, FIRE. DEMONS | PSYCHOLOGY | INSTINCT | SHADOW, by Adelaida"
       },
+
       "emptiness": {
         "title": "Emptiness",
-        "subtitle": "«Після руйнування всіх ролей залишається лише тиша»",
-        "description": "Фінальна точка зустрічі із собою."
+        "subtitle": "“Balance emerges not through denial, but through presence.”",
+        "description": "To be enough. When the masks are removed, what remains is presence. This mask appears at the moment of rupture between identities. Emptiness is neither loss nor refusal. It is the possibility of being without a function. Of existing without justification. This mask neither conceals nor protects. It releases pressure. When we refuse to accept emptiness, we fill it with hyperactivity. We constantly seek something to do so that we do not have to feel it. And so inner noise emerges, a gallop of horses. When we accept it, the possibility appears simply to be, without control or justification. I am. I am without form.",
+        "alt": "Mask Emptiness from the States cycle, FIRE. DEMONS | PSYCHOLOGY | INSTINCT | SHADOW, by Adelaida"
       }
-
     },
-    "title": "States",
-    "description": "The “STATES” cycle consists of four mask collections exploring the human condition through the elements: fire, earth, water, and air. The mask is one of the oldest artistic and ritual objects. It does not conceal — it reveals an inner state.\n\nEach element appears not as a force of nature, but as a psychological condition and a stage of inner transformation:\n— fire — confrontation with the shadow;\n— earth — a return to the body and materiality;\n— water — immersion into the subconscious and the loss of stable identity;\n— air — the dissolution of form and transition into pure state.\n\n“STATES” presents the human being not as a fixed identity, but as a shifting system of states. Each element destroys the previous form, transforming identity in the process.\n\nThe masks are created from papier-mâché combined with natural materials and textiles. Recycled paper becomes a metaphor for processed experience, memory, and repressed states. The visible fibers and irregular textures of the material remain as scars of lived experience.\n\nThese objects are not decorative or festival masks. They are created for contemplation, inner dialogue, and encounters with archetypal human states.\n\nThe collection is limited to seven masks. Seven is a number associated with transition and inner initiation. Each mask represents a distinct archetype and a distinct state of transformation.",
-    "fireTitle": "FIRE",
-    "fireDescription": "FIRE / DEMONS / PSYCHOLOGY",
-    "waterTitle": "WATER",
-    "waterDescription": "THE SUBCONSCIOUS",
-    "airTitle": "AIR",
-    "airDescription": "BREATH",
-    "earthTitle": "EARTH",
-    "earthDescription": "BODY AS LANDSCAPE",
-    "more": "More"
+
+    "earth": {
+      "title": "EARTH. BODY AS LANDSCAPE | MATTER | ORGANIC",
+      "description": "Earth is a return to matter. The second collection explores the body as part of the natural environment. Here, the human being ceases to exist as a separate entity and becomes soil, stone, bark, mycelium, moss, landscape. The collection is concerned with embodiment, organic processes, the cycles of nature, rooting, decomposition and regeneration. The human being is not separate from nature. They are its continuation. The transformation of the cycle lies in accepting our own materiality and our connection to nature.",
+
+      "return": {
+        "title": "Return",
+        "subtitle": "“The wind erases form, but not the memory of its existence.”",
+        "description": "The final stage of the cycle — a moment of complete reset. Facial features are erased, as though gradually carried away by wind and time. The form becomes reminiscent of a dune or a trace almost disappearing into space. It is no longer a face, but the memory of one. Not a body, but a remnant of presence returned to its primordial natural state. Return completes the cycle in which the human being ceases to exist separately from the world and becomes once again part of the original matter of nature.",
+        "alt": "Mask Return from the States cycle, EARTH. BODY AS LANDSCAPE | MATTER | ORGANIC, by Adelaida"
+      },
+
+      "germination": {
+        "title": "Germination",
+        "subtitle": "“Nature does not enter the human being from outside; it has always lived within.”",
+        "description": "This mask opens the cycle because it speaks of the beginning of all living things. The first stage of the cycle is the moment when nature first enters human form. The face still retains its integrity and recognisability, but a process of transformation has already begun within. Fungal structures grow through the skin, as though new life were emerging directly from the body. The human being is still themselves, but nature is no longer an external environment. It becomes part of the organism, slowly transforming it from within. Germination marks the beginning of the loss of boundaries between the body and the surrounding world. Mycelium connects, decomposes, transforms and nourishes, making the continuous cycle of life possible.",
+        "alt": "Mask Germination from the States cycle, EARTH. BODY AS LANDSCAPE | MATTER | ORGANIC, by Adelaida"
+      },
+
+      "weave": {
+        "title": "Interweaving",
+        "subtitle": "“Boundaries disappear where the body ceases to be separate.”",
+        "description": "At this stage, the human form begins to merge with natural structures. Branches and lines pass across the face, altering its architecture and disrupting its familiar integrity. Natural elements intertwine with the body, creating a state in which inner and outer no longer exist separately. This is a moment of transition, a state between the human and the natural. This mask is not about the human being or the plant. It is about connection. In nature, nothing exists in isolation. Tree roots intertwine underground, mycelium connects plants into a single network, branches touch one another, vines embrace trunks, moss envelops stone. Every form of life exists not by itself, but through interaction with others. The face still retains its contours; it does not disappear, but gradually enters the rhythm of nature as a whole.",
+        "alt": "Mask Interweaving from the States cycle, EARTH. BODY AS LANDSCAPE | MATTER | ORGANIC, by Adelaida"
+      },
+
+      "saturation": {
+        "title": "Saturation",
+        "subtitle": "“Life becomes too dense to preserve the previous form.”",
+        "description": "Nature no longer touches the body; it completely fills its space. Moss, fungi, organic forms and dense textures engulf the surface, displacing human presence. The face still retains traces of its former features, but it is no longer central. The organic environment becomes a force in its own right, while the body becomes a space for its growth. This is a stage of being saturated with life, in which the human being begins to dissolve within living matter. The forms do not conceal one another, but preserve the memory of everything that existed before. Nature does not erase the past; it carries it within itself. This is a natural law of life. Nature does not hurry or struggle. It simply continues to grow.",
+        "alt": "Mask Saturation from the States cycle, EARTH. BODY AS LANDSCAPE | MATTER | ORGANIC, by Adelaida"
+      },
+
+      "cover": {
+        "title": "Cover",
+        "subtitle": "“Sometimes nature conceals not the body, but the human essence itself.”",
+        "description": "At this stage, nature becomes a shell. Bark covers the human form like a new skin, concealing everything beneath it. Only fragments of presence remain of the face, traces of what was once human. Nature no longer grows through or intertwines with the form; it completely covers it, transforming it into part of its own structure. The Cover becomes both protection and disappearance.",
+        "alt": "Mask Cover from the States cycle, EARTH. BODY AS LANDSCAPE | MATTER | ORGANIC, by Adelaida"
+      },
+
+      "mineralization": {
+        "title": "Mineralization",
+        "subtitle": "“Everything living eventually becomes matter shaped by time.”",
+        "description": "Organic life loses its mobility and gradually transforms into dense matter. Stone becomes an extension of the body, while the human form solidifies within a new structure. The face almost disappears, yet it still preserves the memory of human presence — a residual relief, a trace of form. This is a stage of fixation and suspension, in which the body ceases to be living and becomes part of rock, surface and time.",
+        "alt": "Mask Mineralization from the States cycle, EARTH. BODY AS LANDSCAPE | MATTER | ORGANIC, by Adelaida"
+      },
+
+      "merger": {
+        "title": "Merger",
+        "subtitle": "“Boundaries disappear when form ceases to belong only to itself.”",
+        "description": "At this stage, the distinction between body and environment disappears. Materials, forms and structures lose their separateness and merge into a single space without boundaries. The human form no longer exists as an autonomous object. What remains is relief, inner movement and a sense of environment — an environment in which it is impossible to determine where the body ends and nature begins. This is a state of complete loss of identity and the final dissolution of form.",
+        "alt": "Mask Merger from the States cycle, EARTH. BODY AS LANDSCAPE | MATTER | ORGANIC, by Adelaida"
+      }
+    },
+
+    "water": {
+      "title": "WATER. THE SUBCONSCIOUS TIDE | SUBCONSCIOUS | MEMORY | ABYSS",
+      "description": "The Subconscious Tide is the third collection in the cycle, devoted to the subconscious. Here, water is not matter, but a mode of existence of the inner world. It does not change form through force. It changes it through duration. Through constant contact. Through repetition. What appears unchanging may one day reveal itself to be entirely different. This is also how the human psyche works. The deepest inner changes do not happen instantly. They emerge almost imperceptibly, accumulate, settle into the depths, and only later transform our perception, our reactions, and the very way we exist in the world. In this collection, the subconscious appears as an oceanic depth — ancient, silent and perpetually in motion.",
+
+      "surface_tension": {
+        "title": "Surface Tension",
+        "subtitle": "“Depth always begins with a barely visible crack.”",
+        "description": "The surface of consciousness. The first contact between the human being and inner depth. This is the most distinctly human mask in the entire water collection. It exists on the boundary between consciousness and depth. The subconscious has not yet fully taken hold of the personality, but it has already begun to surface. Anxiety begins to appear beneath the beauty of the mask. The personality still retains its form, but inner processes have already begun to alter its surface.",
+        "alt": "Mask Surface Tension from the States cycle, WATER. THE SUBCONSCIOUS TIDE | SUBCONSCIOUS | MEMORY | ABYSS, by Adelaida"
+      },
+
+      "undertow": {
+        "title": "Undertow",
+        "subtitle": "“The strongest currents always begin beneath the surface.”",
+        "description": "This mask reflects the beginning of an inner descent into the depths of the subconscious. Here, the sea becomes a metaphor for repressed states slowly rising to the surface. The mask speaks of an inner current that imperceptibly draws the human being deeper into their own psyche. The subconscious gradually transforms the personality, even as the individual continues to maintain the illusion of control. An undertow drawing consciousness into the depths.",
+        "alt": "Mask Undertow from the States cycle, WATER. THE SUBCONSCIOUS TIDE | SUBCONSCIOUS | MEMORY | ABYSS, by Adelaida"
+      },
+
+      "compression": {
+        "title": "Compression",
+        "subtitle": "“Depth destroys not through force, but through the duration of pressure.”",
+        "description": "Pressure is the state of the psyche under the continuous influence of inner depth. The subconscious slowly deforms the personality, altering its structure through the pressure of memory, fear and repressed states. The psyche begins to deform under the influence of inner processes. This mask speaks of a state in which a person has held experiences inside for too long, remaining too long under the pressure of silence, memory or fear.",
+        "alt": "Mask Compression from the States cycle, WATER. THE SUBCONSCIOUS TIDE | SUBCONSCIOUS | MEMORY | ABYSS, by Adelaida"
+      },
+
+      "adrift": {
+        "title": "Adrift",
+        "subtitle": "“Sometimes a person disappears not in an instant, but with the current.”",
+        "description": "This mask speaks of the slow internal displacement of a personality that has lost its point of orientation. Depth does not destroy the human being; it gradually erases its boundaries. The sense of struggle disappears. Depth no longer presses or pulls — it simply carries the person away. The sandy texture evokes the erosion of time, memory, form and human identity. The face appears washed by the sea, stripped of sharp features and resistance. It seems to have existed for a long time between current, sand and the silence of the deep. It is the loss of direction and the gradual dissolution of the self into the current of memory and time.",
+        "alt": "Mask Adrift from the States cycle, WATER. THE SUBCONSCIOUS TIDE | SUBCONSCIOUS | MEMORY | ABYSS, by Adelaida"
+      },
+
+      "abyss": {
+        "title": "The Abyss",
+        "subtitle": "“The abyss does not change the body. It changes the shape of consciousness.”",
+        "description": "The Abyss is the point of complete confrontation between the human being and the unconscious. A space where the personality loses its stable form and dissolves within the depths of its own psyche. This mask is the central point of the entire water collection. Here, human identity almost disappears, giving way to depth and time. The face no longer belongs to a person. It appears as an object that has remained beneath the water for a long time, covered in marine growth, subjected to pressure, stripped of its original form. Closed eyes become a symbol of complete immersion within the self.",
+        "alt": "Mask The Abyss from the States cycle, WATER. THE SUBCONSCIOUS TIDE | SUBCONSCIOUS | MEMORY | ABYSS, by Adelaida"
+      },
+
+      "descent": {
+        "title": "Descent",
+        "subtitle": "“Some depths cannot be experienced without being changed.”",
+        "description": "This is a state of complete inner immersion, in which the human being loses their former identity and ceases to distinguish themselves from the depths of their own subconscious. It is one of the most difficult and emotionally charged masks in the collection. But it is not about literal death. It is about the disappearance of the former self. If The Abyss is contact with depth, Descent is the moment when a person can no longer distinguish where they end and the inner ocean begins.",
+        "alt": "Mask Descent from the States cycle, WATER. THE SUBCONSCIOUS TIDE | SUBCONSCIOUS | MEMORY | ABYSS, by Adelaida"
+      },
+
+      "bioluminescence": {
+        "title": "Bioluminescence",
+        "subtitle": "“Sometimes light is born only in the darkest depths.”",
+        "description": "An inner light emerging from the deepest part of the subconscious. This is the light that appears after passing completely through the depths of the unconscious. The silence after transformation. The final mask of the collection. The quietest, strangest and almost otherworldly after pressure, erosion and dissolution. After the loss of identity within the depths, a light emerges — not external, but internal. This mask speaks of the fact that even within the darkest layers of the subconscious, life, energy, memory and an inner radiance continue to exist.",
+        "alt": "Mask Bioluminescence from the States cycle, WATER. THE SUBCONSCIOUS TIDE | SUBCONSCIOUS | MEMORY | ABYSS, by Adelaida"
+      }
+    },
+
+    "air": {
+      "title": "AIR. BREATH | STATES | NERVOUS SYSTEM",
+      "description": "The Space Between is the fourth collection in the cycle, devoted to the inner states of the human being. Air addresses what cannot be seen, but can be felt. In this collection, air exists not around the human being, but within them. It is the space between inhale and exhale, between thought and word, between tension and calm. This is why it is the least material collection of the entire cycle. Air cannot be seen; only its effects become visible. A human being is not only a body, a personality or a history. We are also composed of states that pass through us, alter us and gradually disappear, leaving only a trace of their presence. Each mask in this collection is an attempt to give form to what usually remains invisible. The transformation explored here is not about fighting our states, but accepting them. We cannot control everything that passes through us, but we can learn not to hold on to what is already ready to leave. Air is constantly changing, and it is within this impermanence that freedom emerges.",
+
+      "first_breath": {
+        "title": "First Breath",
+        "subtitle": "“Consciousness begins with air.”",
+        "description": "The first point of the cycle. This mask speaks of the moment when inner perception is born. Of the first contact between the human being and the world through breath. Of vulnerability, the shock of presence and the first awareness of being alive. This is not the birth of the body, but the birth of consciousness. The moment when air first passes through the human being, opening the space for all future states.",
+        "alt": "Mask First Breath from the States cycle, AIR. BREATH | STATES | NERVOUS SYSTEM, by Adelaida"
+      },
+
+      "panic": {
+        "title": "Panic",
+        "subtitle": "“Sometimes air becomes the most unreachable space.”",
+        "description": "The first disruption of the nervous system. Panic is a state in which the body ceases to trust its own breathing. The space around us does not change, yet suddenly it contracts from within. Instinctively, the person tries to retreat into themselves, cover their face, make themselves smaller, as though attempting to protect the most vulnerable part of their own self. We do not cover the heart, the hands or the legs. In a moment of panic, we first cover the face, as though our entire essence were concentrated there. The space of the psyche becomes a sealed chamber of pressure, where even air seems unreachable.",
+        "alt": "Mask Panic from the States cycle, AIR. BREATH | STATES | NERVOUS SYSTEM, by Adelaida"
+      },
+
+      "white_noise": {
+        "title": "White Noise",
+        "subtitle": "“The loudest noise is born inside the head.”",
+        "description": "The overload of consciousness. White Noise is a state in which a person is no longer able to distinguish what matters from what is incidental. The flow of information, advertising, messages, expectations and thoughts becomes a continuous noise filling the inner space. Air ceases to be a space of freedom. It becomes so saturated with information that even silence no longer feels empty. This is the state of the contemporary nervous system, perpetually held in tension.",
+        "alt": "Mask White Noise from the States cycle, AIR. BREATH | STATES | NERVOUS SYSTEM, by Adelaida"
+      },
+
+      "whisper": {
+        "title": "Whisper",
+        "subtitle": "“The most important things are spoken in a whisper.”",
+        "description": "The quietest mask of the cycle. Whisper is not weakness of voice. It is a state in which what matters most no longer requires volume. It emerges where trust, intimacy and inner vulnerability begin. There are words that cannot be spoken aloud. They exist only in the silence between people, leaving an echo that lasts far longer than the sound itself. After inner noise, the whisper becomes a return to the self. It almost disappears, and precisely for this reason it resonates most strongly.",
+        "alt": "Mask Whisper from the States cycle, AIR. BREATH | STATES | NERVOUS SYSTEM, by Adelaida"
+      },
+
+      "suspension": {
+        "title": "Suspension",
+        "subtitle": "“Suspension is a form of existence without support.”",
+        "description": "The central mask of the collection. Suspension is a state in which a person no longer inhabits the past, but has not yet taken a step into the future. It is a space between movement and stillness, decision and doubt. In this state, the sense of time and grounding disappears. A person seems to hover within an extended pause, where everything is still possible, but nothing has yet happened. It is within this uncertainty that air becomes a space of waiting.",
+        "alt": "Mask Suspension from the States cycle, AIR. BREATH | STATES | NERVOUS SYSTEM, by Adelaida"
+      },
+
+      "exhale": {
+        "title": "Release",
+        "subtitle": "“Some things can only be let go with an exhale.”",
+        "description": "Release is the state in which a person stops holding on to what can no longer be carried forward — pain, fear, guilt, familiar roles or memory. It is neither a struggle with oneself nor a destruction of the past. It is a quiet moment of acceptance, when the need to hold on to something that has already served its purpose disappears with the exhale. The exhale becomes a gesture of trust. It creates space for a new state.",
+        "alt": "Mask Release from the States cycle, AIR. BREATH | STATES | NERVOUS SYSTEM, by Adelaida"
+      },
+
+      "absence": {
+        "title": "Absence",
+        "subtitle": "“After a person is gone, the air remembers their presence for a long time.”",
+        "description": "The final mask of The Space Between. Absence is neither emptiness nor loss. It is a particular form of presence that remains after an inner process has ended — after a person, after a feeling, after a state. Air and time gradually erase everything incidental. Stories, emotions, tension and roles disappear. But what was real does not need form in order to continue existing. Absence becomes the final stage of transformation. The moment when nothing more needs to be held.",
+        "alt": "Mask Absence from the States cycle, AIR. BREATH | STATES | NERVOUS SYSTEM, by Adelaida"
+      }
+    }
   },
+
   "process": {
     "title": "Creation",
     "process": "Processes",
@@ -85,14 +276,33 @@
     "insperation": "Insperations",
     "actions": "Actions",
     "influence": "Influences",
-    "more": "More"
+    "craft_img_alt": "Crafting process of the mask",
+    "paint_img_alt": "Painting process of the mask"
   },
+
   "fashion": {
-    "accessoriesTitle": "Elegant Accessories",
-    "accessoriesButton": "Explore",
+    "vertical_text": "FASHION",
+    "accessoriesTitle": "Fashion Accessories",
+    "accessories_alt": "Fashion accessories",
 
     "patchesTitle": "Patches",
     "patchesDescription": "Unique decorative pieces",
-    "patchesButton": "Explore"
+    "patches_alt": "Fashion patches"
+  },
+
+  "footer": {
+    "title": "I don't create objects — I create states.",
+    "footer_img_alt": "Decorative sun mask",
+    "description": "Each work is deeply experienced and personally lived through by the artist.",
+    "copyright": "AKCENTRA®"
+  },
+
+  "comingSoon": {
+    "label": "Coming soon",
+    "eyebrow": "Work in progress",
+    "title": "Coming soon.",
+    "description": "This part of the project is currently being developed. The page will be available soon.",
+    "backHome": "Back to home",
+    "status": "Under construction"
   }
 }
