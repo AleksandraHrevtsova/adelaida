@@ -3,7 +3,7 @@ import Image from 'next/image';
 type ResponsiveImageProps = {
   src: string;
   alt: string;
-  aspect?: string; // aspect-square | aspect-video | aspect-[4/5] | aspect-[3/4]
+  aspect?: string;
   fill?: boolean;
   objectFit?: 'cover' | 'contain';
   sizes?: string;
@@ -28,15 +28,13 @@ export default function ResponsiveImage({
   const imageClass = `
     ${fill ? 'absolute inset-0' : 'h-auto w-full'}
     transition-transform duration-700
-    ${objectFit === 'cover'
-      ? 'object-cover'
-      : 'object-contain'}
+    ${objectFit === 'cover' ? 'object-cover' : 'object-contain'}
   `;
 
   return (
     <div
       className={`
-        ${fill ? `relative ${aspect}` : ''}
+        ${fill ? 'relative h-full w-full' : `w-full ${aspect}`}
         ${className}
       `}
     >

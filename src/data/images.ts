@@ -16,6 +16,9 @@ export type Collection = {
 };
 
 export const imagesIds = {
+  hero: {
+    main: 'v1779295421/hero-image_fdbzcd.jpg',
+  },
   states: {
     fire: {
       main: {
@@ -77,6 +80,17 @@ export const imagesIds = {
       }
     },
   },
+  process: {
+    craft: 'v1778450558/create_mask_process_craft_cojqed.jpg',
+    painting: 'v1778450549/create_mask_process_paiting_tt7xuq.jpg',
+  },
+  fashion: {
+    accessories: 'v1787604478/accessories_oslz7p.jpg',
+    patches: 'v1787604482/patches_a51u5t.jpg',
+  },
+  footer: {
+    main: 'v1778930283/sun-mask-footer_nwrbta.jpg',
+  }
 } as const;
 
 function generateArtworks(stateName: StateName) {
@@ -117,25 +131,13 @@ export function isStateName(value: string): value is StateName {
 
 export const images = {
   hero: cloudinaryImage(
-    'hero-image_fdbzcd',
-    'Adelaida Art Mask hero image',
+    imagesIds.hero.main,
+    'main_img_alt',
     {
       width: imageSizes.hero.width,
       height: imageSizes.hero.height,
     }
   ),
-
-  fashion: {
-    look1: cloudinaryImage(
-      '/images/look-1.jpg',
-      'Fashion accessories look'
-    ),
-
-    look2: cloudinaryImage(
-      '/images/look-2.jpg',
-      'Organic dress fashion look'
-    ),
-  },
 
   states: {
     fire: {
@@ -161,8 +163,8 @@ export const images = {
 
   process: {
     craft:  cloudinaryImage(
-      'create_mask_process_craft_cojqed',
-      'Crafting process of the mask',
+      imagesIds.process.craft,
+      'craft_img_alt',
       {
         width: 1200,
         height: 1600,
@@ -171,8 +173,8 @@ export const images = {
     ),
 
     painting: cloudinaryImage(
-      'create_mask_process_paiting_tt7xuq',
-      'Painting process of the mask',
+      imagesIds.process.painting,
+      'paint_img_alt',
       {
         width: 1200,
         height: 1600,
@@ -180,9 +182,21 @@ export const images = {
     ),
   },
 
+  fashion: {
+    accessories: cloudinaryImage(
+      imagesIds.fashion.accessories,
+      'accessories_alt'
+    ),
+
+    patches: cloudinaryImage(
+      imagesIds.fashion.patches,
+      'patches_alt'
+    ),
+  },
+
   footer: cloudinaryImage(
-    'sun-mask-footer_nwrbta',
-    'Decorative footer mask',
+    imagesIds.footer.main,
+    'footer_img_alt',
     {
       width: 1600,
       height: 900,
