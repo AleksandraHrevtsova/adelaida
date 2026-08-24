@@ -32,9 +32,9 @@ function CardOverlay({
 }: {
   state: StateName;
 }) {
-  const t = useTranslations('states');
-  const title = t(`${state}_title`);
-  const description = t(`${state}_description`);
+  const t = useTranslations();
+  const title = t(`states.${state}_title`);
+  const description = t(`states.${state}_description`);
 
   return (
     <div

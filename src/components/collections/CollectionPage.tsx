@@ -7,7 +7,7 @@ import { ArrowLeft } from 'lucide-react';
 import Image from 'next/image';
 import Link from '@/components/ui/Link';
 
-import type { Artwork, Collection } from '@/data/images';
+import type { Collection, Artwork } from '@/data/images';
 import ArtworkModal from './ArtworkModal';
 
 type Props = {
@@ -15,6 +15,7 @@ type Props = {
 };
 
 export default function CollectionPage({ collection }: Props) {
+  const [selectedCollection] = useState<Collection | null>(collection);
   const [selectedArtwork, setSelectedArtwork] = useState<Artwork | null>(null);
 
   const t = useTranslations();
@@ -109,6 +110,7 @@ export default function CollectionPage({ collection }: Props) {
 
       {/* MODAL */}
       <ArtworkModal
+        collection={selectedCollection}
         artwork={selectedArtwork}
         onCloseAction={() => setSelectedArtwork(null)}
       />

@@ -3,18 +3,22 @@
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
-import type { Artwork } from '@/data/collections';
-import { useLocale, useTranslations } from 'next-intl';
+import type { Collection, Artwork } from '@/data/images';
+import { useTranslations } from 'next-intl';
+
 type Props = {
+  collection: Collection | null;
   artwork: Artwork | null;
   onCloseAction: () => void;
 };
 
 export default function ArtworkModal({
+  collection,
   artwork,
   onCloseAction,
 }: Props) {
   const t = useTranslations();
+
   return (
     <AnimatePresence>
       {artwork && (
@@ -37,7 +41,7 @@ export default function ArtworkModal({
             <div className="relative h-[60vh] lg:h-full">
               <Image
                 src={artwork.image}
-                alt={t(artwork.title)}
+                alt={t(`states.${collection?.key}.${artwork?.key}.alt`)}
                 className="object-cover"
                 priority
               />
@@ -45,16 +49,14 @@ export default function ArtworkModal({
 
             {/* CONTENT */}
             <div className="flex flex-col justify-center px-6 py-10 text-white md:px-10 lg:px-16">
-              <h2
-                className="mb-8 text-4xl uppercase tracking-wide md:text-6xl">
-                {t(artwork.title)}
+              <h2 className="mb-8 text-4xl uppercase tracking-wide md:text-6xl">
+                {t(`states.${collection?.key}.${artwork?.key}.title`)}
               </h2>
               <p className="mb-6 text-xl leading-relaxed text-white/80 md:text-2xl">
-                {t(artwork.subtitle)}
+                {t(`states.${collection?.key}.${artwork?.key}.subtitle`)}
               </p>
-              <p
-                className="max-w-xl text-lg leading-relaxed text-white/70 md:text-xl">
-                {t(artwork.description)}
+              <p className="max-w-xl text-lg leading-relaxed text-white/70 md:text-xl">
+                {t(`states.${collection?.key}.${artwork?.key}.description`)}
               </p>
             </div>
           </div>

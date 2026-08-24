@@ -11,56 +11,76 @@ export type Artwork = {
 
 export type Collection = {
   slug: StateName;
-  translationKey: StateName;
+  key: StateName;
   artworks: Artwork[];
 };
 
 export const imagesIds = {
   states: {
     fire: {
-      threshold: 'v1787442487/threshold_r9b02s.jpg',
-      desire: 'v1787442481/desire_n6xpto.jpg',
-      rage: 'v1787442485/rage_jplfne.jpg',
-      witness: 'v1787442480/witness_fqsmv2.jpg',
-      shame: 'v1787442477/shame_npt0es.jpg',
-      illusion: 'v1787442479/illusion_ftaolb.jpg',
-      emptiness: 'v1787442483/emptiness_smiuko.jpg',
-    },
-
-    air: {
-      first_breath: 'v1787138796/first_breath_mm2kvm.jpg',
-      suspension: 'v1787138796/suspension_eusa21.jpg',
-      exhale: 'v1787138796/exhale_ww4kd0.jpg',
-      white_noise: 'v1787138795/white_noise_ncgofj.jpg',
-      panic: 'v1787138795/panic_upxoxd.jpg',
-      absence: 'v1787138794/absence_aepzlm.jpg',
-      whisper: 'v1787138794/whisper_bxzsfg.jpg',
+      main: {
+        threshold: 'v1787442487/threshold_r9b02s.jpg',
+      },
+      artworks: {
+        threshold: 'v1787442487/threshold_r9b02s.jpg',
+        desire: 'v1787442481/desire_n6xpto.jpg',
+        rage: 'v1787442485/rage_jplfne.jpg',
+        witness: 'v1787442480/witness_fqsmv2.jpg',
+        shame: 'v1787442477/shame_npt0es.jpg',
+        illusion: 'v1787442479/illusion_ftaolb.jpg',
+        emptiness: 'v1787442483/emptiness_smiuko.jpg',
+      }
     },
 
     water: {
-      surface_tension: 'v1786478910/surface_tension_lpwfqr.jpg',
-      abyss: 'v1786478910/abyss_bpbfam.jpg',
-      undertow: 'v1786478909/undertow_uudbfq.jpg',
-      bioluminescence: 'v1786478909/bioluminescence_b6bqx5.jpg',
-      compression: 'v1786478909/compression_ur7fcb.jpg',
-      descent: 'v1786478909/descent_suiaoe.jpg',
-      adrift: 'v1786478908/adrift_xwhvym.jpg',
+      main: {
+        descent: 'v1786478909/descent_suiaoe.jpg',
+      },
+      artworks: {
+        descent: 'v1786478909/descent_suiaoe.jpg',
+        adrift: 'v1786478908/adrift_xwhvym.jpg',
+        compression: 'v1786478909/compression_ur7fcb.jpg',
+        bioluminescence: 'v1786478909/bioluminescence_b6bqx5.jpg',
+        undertow: 'v1786478909/undertow_uudbfq.jpg',
+        abyss: 'v1786478910/abyss_bpbfam.jpg',
+        surface_tension: 'v1786478910/surface_tension_lpwfqr.jpg',
+      }
+    },
+
+    air: {
+      main: {
+        absence: 'v1787138794/absence_aepzlm.jpg',
+      },
+      artworks: {
+        absence: 'v1787138794/absence_aepzlm.jpg',
+        panic: 'v1787138795/panic_upxoxd.jpg',
+        exhale: 'v1787138796/exhale_ww4kd0.jpg',
+        white_noise: 'v1787138795/white_noise_ncgofj.jpg',
+        first_breath: 'v1787138796/first_breath_mm2kvm.jpg',
+        whisper: 'v1787138794/whisper_bxzsfg.jpg',
+        suspension: 'v1787138796/suspension_eusa21.jpg',
+      }
     },
 
     earth: {
-      return: 'v1781698296/return_uqpjan.jpg',
-      germination: 'v1781698295/germination_uxomur.jpg',
-      saturation: 'v1781698295/saturation_qdfr9r.jpg',
-      mineralization: 'v1781698295/mineralization_uglan5.jpg',
-      cover: 'v1781698294/cover_ytsfzl.jpg',
-      merger: 'v1781698294/merger_fehb42.jpg',
-      weave: 'v1781698294/weave_uilz2d.jpg',
+      main: {
+        saturation: 'v1781698296/earth-saturation_y38iyu.jpg',
+      },
+      artworks: {
+        saturation: 'v1781698295/saturation_qdfr9r.jpg',
+        return: 'v1781698296/return_uqpjan.jpg',
+        germination: 'v1781698295/germination_uxomur.jpg',
+        mineralization: 'v1781698295/mineralization_uglan5.jpg',
+        cover: 'v1781698294/cover_ytsfzl.jpg',
+        merger: 'v1781698294/merger_fehb42.jpg',
+        weave: 'v1781698294/weave_uilz2d.jpg',
+      }
     },
   },
 } as const;
 
 function generateArtworks(stateName: StateName) {
-  return Object.entries(imagesIds.states[stateName]).map(([key, id]): Artwork => {
+  return Object.entries(imagesIds.states[stateName].artworks).map(([key, id]): Artwork => {
     return {
       id,
       key,
@@ -72,20 +92,22 @@ function generateArtworks(stateName: StateName) {
 function generateCollection(stateName: StateName) {
   return {
     slug: stateName,
-    translationKey: stateName,
+    key: stateName,
     artworks: generateArtworks(stateName),
   }
 }
 
 function generateMainCollectionImage(stateName: StateName) {
-  const collection = imagesIds.states[stateName];
-  const firыtItem = Object.entries(collection)[0];
+  const mainImage = imagesIds.states[stateName].main;
+  const artworks = imagesIds.states[stateName].artworks;
+  
+  const firstItem = Object.entries(mainImage)[0] || Object.entries(artworks)[0];
 
-  if (!firыtItem) {
+  if (!firstItem) {
     throw new Error(`Collection "${stateName}" is empty`);
   }
 
-  const [key, publicId] = firыtItem;
+  const [key, publicId] = firstItem;
   return cloudinaryImage(publicId, key);
 }
 
