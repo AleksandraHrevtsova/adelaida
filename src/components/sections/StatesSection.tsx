@@ -38,17 +38,20 @@ function CardOverlay({
 
   return (
     <div
-      className={`
+      className="
         absolute inset-4
         flex flex-col justify-end
         border border-white/20
         bg-white/10
         p-6
         backdrop-blur-sm
-        opacity-0
+
+        opacity-100
         transition-opacity duration-500
-        group-hover:opacity-100
-      `}
+
+        lg:opacity-0
+        lg:group-hover:opacity-100
+      "
     >
       <h3 className="mb-4 text-3xl font-semibold text-white">
         {title}
@@ -58,7 +61,19 @@ function CardOverlay({
         {description}
       </p>
 
-      <span className="mt-6 w-fit border-b border-white/40 pb-1 text-sm text-white transition-colors duration-300 group-hover:border-white">
+      <span
+        className="
+          mt-6
+          w-fit
+          border-b border-white/40
+          pb-1
+          text-sm
+          text-white
+          transition-colors
+          duration-300
+          lg:group-hover:border-white
+        "
+      >
         {t('more')}
       </span>
     </div>
@@ -100,7 +115,7 @@ function StateCard({ item }: { item: CardItem }) {
             object-contain
             transition-transform
             duration-700
-            group-hover:scale-105
+            lg:group-hover:scale-105
           "
           sizes="
             (max-width: 767px) 100vw,
@@ -116,10 +131,13 @@ function StateCard({ item }: { item: CardItem }) {
           absolute
           inset-0
           ${overlay}
-          opacity-0
+
+          opacity-100
           transition-opacity
           duration-500
-          group-hover:opacity-100
+
+          lg:opacity-0
+          lg:group-hover:opacity-100
         `}
       />
 
