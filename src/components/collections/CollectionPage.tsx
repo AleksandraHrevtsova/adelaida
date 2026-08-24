@@ -1,15 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 
 import { ArrowLeft } from 'lucide-react';
 import Image from 'next/image';
 import Link from '@/components/ui/Link';
-import ResponsiveImage from '@/components/ui/ResponsiveImage';
-import { images } from '@/data/images';
 
-import type { Artwork, Collection } from '@/data/collections';
+import type { Artwork, Collection } from '@/data/images';
 import ArtworkModal from './ArtworkModal';
 
 type Props = {
@@ -17,43 +15,46 @@ type Props = {
 };
 
 export default function CollectionPage({ collection }: Props) {
-  const [selectedArtwork, setSelectedArtwork] =
-    useState<Artwork | null>(null);
+  const [selectedArtwork, setSelectedArtwork] = useState<Artwork | null>(null);
 
-    const locale = useLocale();
-    const t = useTranslations();
+  const t = useTranslations();
+  const description = t(`states.${collection.key}.description`);
 
-    return (
-      <main className="bg-[#e9e9e9] text-black">
-        <Link
-          path={`/${locale}`}
-          className="
-            fixed left-5 top-5 z-50
-            flex items-center gap-3
-            text-black/70
-            md:left-8 md:top-8
-            lg:left-12 lg:top-12
-          "
-        >
-          <ArrowLeft className="h-10 w-10 stroke-1" />
-          <span className=" hidden text-sm uppercase tracking-[0.25em] md:block">
-            назад
-          </span>
-        </Link>
-        {/* HERO */}
-        <section className="px-5 pt-32 pb-16 md:px-8 lg:px-12 lg:pt-40 lg:pb-24">
-          <div className="max-w-400 mx-auto">
-            <h1 className="max-w-6xl text-5xl uppercase leading-none tracking-wide md:text-7xl lg:text-[110px]">
-              {t(collection.title)}
-            </h1>
-          </div>
-        </section>
+  return (
+    <main className="bg-[#e9e9e9] text-black">
+      <Link
+        path={`/`}
+        className="
+          fixed left-5 top-5 z-50
+          flex items-center gap-3
+          text-black/70
+          md:left-8 md:top-8
+          lg:left-12 lg:top-12
+        "
+      >
+        <ArrowLeft className="h-10 w-10 stroke-1" />
+        <span className=" hidden text-sm uppercase tracking-[0.25em] md:block">
+          {t('back')}
+        </span>
+      </Link>
+      {/* HERO */}
+      <section className="px-5 pt-32 pb-16 md:px-8 lg:px-12 lg:pt-40 lg:pb-24">
+        <div className="max-w-400 mx-auto">
+          <h1 className="max-w-6xl text-5xl uppercase leading-none tracking-wide md:text-7xl lg:text-[110px]">
+            {t(`states.${collection.key}.title`)}
+          </h1>
+        </div>
+      </section>
 
-        {/* GALLERY */}
-        <section className="px-5 md:px-8 lg:px-12">
-          <div className="max-w-400 mx-auto">
-            <div className="columns-1 gap-5 md:columns-2 lg:columns-3">
-              {collection.artworks.map((artwork, index) => (
+      {/* GALLERY */}
+      <section className="px-5 md:px-8 lg:px-12">
+        <div className="max-w-400 mx-auto">
+          <div className="columns-1 gap-5 md:columns-2 lg:columns-3">
+            {collection.artworks.map((artwork, index) => {
+              const title = t(`states.${collection.key}.${artwork.key}.title`);
+              const altText = t(`states.${collection.key}.${artwork.key}.alt`);
+              
+              return (
                 <button
                   key={artwork.id}
                   onClick={() => setSelectedArtwork(artwork)}
@@ -66,13 +67,9 @@ export default function CollectionPage({ collection }: Props) {
                       ${index % 3 === 2 ? 'aspect-5/4' : ''}
                     `}
                   >
-                    {/* <ResponsiveImage
-                      src={images.image}
-
-                    /> */}
                     <Image
                       src={artwork.image}
-                      alt={t(artwork.title)}
+                      alt={altText}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -89,31 +86,32 @@ export default function CollectionPage({ collection }: Props) {
                         group-hover:opacity-100
                       "
                     >
-                      <h2 className=" text-2xl uppercase tracking-wide text-white md:text-3xl">
-                        {t(artwork.title)}
+                      <h2 className="text-2xl uppercase tracking-wide text-white md:text-3xl">
+                        {title}
                       </h2>
                     </div>
                   </div>
                 </button>
-              ))}
-            </div>
+              );
+            })}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* DESCRIPTION */}
-        <section className="px-5 py-24 md:px-8 lg:px-12 lg:py-40">
-          <div className="max-w-5xl">
-            <p className="text-xl leading-[1.9] md:text-2xl lg:text-3xl">
-              {collection.description}
-            </p>
-          </div>
-        </section>
+      {/* DESCRIPTION */}
+      <section className="px-5 py-24 md:px-8 lg:px-12 lg:py-40">
+        <div className="max-w-5xl">
+          <p className="text-xl leading-[1.9] md:text-2xl lg:text-3xl">
+            {description}
+          </p>
+        </div>
+      </section>
 
-        {/* MODAL */}
-        <ArtworkModal
-          artwork={selectedArtwork}
-          onCloseAction={() => setSelectedArtwork(null)}
-        />
-      </main>
-    );
+      {/* MODAL */}
+      <ArtworkModal
+        artwork={selectedArtwork}
+        onCloseAction={() => setSelectedArtwork(null)}
+      />
+    </main>
+  );
 };
