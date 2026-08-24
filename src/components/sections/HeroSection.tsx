@@ -1,12 +1,28 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 
 import NavigationMenu from '@/components/layout/NavigationMenu';
-import Link from '@/components/ui/Link';
 import ResponsiveImage from '@/components/ui/ResponsiveImage';
+import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
+import Link from '@/components/ui/Link';
+
 import { images } from '@/data/images';
+import links from '@/constants/socialLinks';
 
 export default function HeroSection() {
-  const t = useTranslations('hero');
+  const t = useTranslations();
+
+  const brand = t('brand');
+
+  const title = t('hero.title');
+  const subTitle = t('hero.subTitle');
+  const description = t('hero.description');
+  const instagram = t('instagram');
+  const facebook = t('facebook');
+
+  const insta = links.socialLinks.instagram;
+  const fb = links.socialLinks.facebook;
 
   return (
     <section className='min-h-screen bg-white'>
@@ -16,18 +32,15 @@ export default function HeroSection() {
         <div className='flex flex-col justify-between bg-[#1f0101] px-6 py-8 text-white sm:px-10 sm:py-10 lg:px-16 lg:py-14'>
           {/* TOP NAV */}
           <div className='flex justify-end'>
-            <div className='flex gap-2 text-sm sm:text-base'>
-              <Link label='EN' path='/en' />
-              <Link label='UA' path='/ua' />
-            </div>
+            <LanguageSwitcher />
           </div>
 
           {/* MAIN TEXT */}
           <div className='max-w-[90vw] py-12 sm:max-w-175 lg:py-0'>
             <h1 className='flex flex-col gap-3 text-[clamp(2.5rem,8vw,5.25rem)] font-medium leading-[0.95] tracking-[-0.03em] wrap-break-words'>
-              <span>{t('subTitle')}</span>
-              <span className='max-w-[20ch] text-[clamp(1rem,3vw,1.5rem)] leading-[1.3] tracking-[-0.01em] text-white/80'>
-                {t('description')}
+              <span>{subTitle}</span>
+              <span className='mt-4 max-w-[40ch] text-[clamp(1rem,3vw,1.5rem)] leading-[1.3] tracking-[-0.01em] text-white/80'>
+                {description}
               </span>
             </h1>
           </div>
@@ -36,13 +49,13 @@ export default function HeroSection() {
           <div className='flex flex-col gap-4 text-sm sm:flex-row sm:items-center sm:justify-between sm:text-base'>
             <div className='flex flex-col'>
               <div className='w-full flex gap-3'>
-                <Link label='Instagram' path='https://www.instagram.com/adelaida_art_mask' isBlank />
+                <Link label={instagram} path={insta} isBlank />
                 <span>/</span>
-                <Link label='Facebook' path='https://www.facebook.com/adelaidaartmask' isBlank />
+                <Link label={facebook} path={fb} isBlank />
               </div>
 
               <span className='max-w-[20ch] text-[clamp(2rem,3vw,1.5rem)] leading-[1.3] tracking-[-0.01em] text-white/80'>
-                {t('title')}
+                {title}
               </span>
             </div>
           </div>
@@ -53,18 +66,17 @@ export default function HeroSection() {
           <ResponsiveImage
             src={images.hero.src}
             alt={images.hero.alt}
-            fill={true}
+            fill
             priority
+            sizes='(min-width: 1024px) 50vw, 100vw'
           />
 
-          {/* NAME */}
           <div className='absolute bottom-6 left-5 z-10 sm:bottom-10 sm:left-10 lg:bottom-14 lg:left-14'>
-            <h2 className='text-[80px] font-black uppercase leading-[0.9] tracking-tighter text-white sm:text-[110px] md:text-[120px] lg:text-[120px] xl:text-[120px]'>
-              Adelaida
+            <h2 className='text-[80px] font-black uppercase leading-[0.9] tracking-tighter text-white sm:text-[110px] md:text-[120px] lg:text-[120px]'>
+              {brand}
             </h2>
           </div>
 
-          {/* OVERLAY */}
           <div className='absolute inset-0 bg-black/10' />
         </div>
       </div>
