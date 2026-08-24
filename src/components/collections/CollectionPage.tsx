@@ -4,11 +4,14 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 
 import { ArrowLeft } from 'lucide-react';
-import Image from 'next/image';
-import Link from '@/components/ui/Link';
+
+import { CustomLink } from '@/components/ui/Link';
+import { routes } from '@/constants/routes';
 
 import type { Collection, Artwork } from '@/data/images';
+
 import ArtworkModal from './ArtworkModal';
+import Image from 'next/image';
 
 type Props = {
   collection: Collection;
@@ -23,8 +26,8 @@ export default function CollectionPage({ collection }: Props) {
 
   return (
     <main className="bg-[#e9e9e9] text-black">
-      <Link
-        path={`/`}
+      <CustomLink
+        path={routes.home}
         className="
           fixed left-5 top-5 z-50
           flex items-center gap-3
@@ -37,7 +40,7 @@ export default function CollectionPage({ collection }: Props) {
         <span className=" hidden text-sm uppercase tracking-[0.25em] md:block">
           {t('back')}
         </span>
-      </Link>
+      </CustomLink>
       {/* HERO */}
       <section className="px-5 pt-32 pb-16 md:px-8 lg:px-12 lg:pt-40 lg:pb-24">
         <div className="max-w-400 mx-auto">

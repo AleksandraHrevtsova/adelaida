@@ -1,10 +1,12 @@
 'use client';
 
-import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
 import ResponsiveImage from '@/components/ui/ResponsiveImage';
 import { images } from '@/data/images';
+
 import links from '@/constants/socialLinks';
+import { SocialLink } from '@/components/ui/Link';
 
 export default function Footer() {
   const t = useTranslations();
@@ -50,6 +52,7 @@ export default function Footer() {
             >
               {t('subscribe')}
             </button>
+
             <p className='max-w-155 font-mono uppercase tracking-[0.2em] leading-[1.4]
               text-sm md:text-base lg:text-lg'>
               {t('footer.description')}
@@ -78,25 +81,19 @@ export default function Footer() {
             <div className="flex items-center gap-6 flex-wrap">
               <span className="font-bold">{brand}</span>
               <div className="flex items-center gap-4">
-                <Link href={insta} target="_blank">
-                  {instagram}
-                </Link>
+                <SocialLink label={instagram} path={insta} />
                 <span>/</span>
-                <Link href={fb} target="_blank">
-                  {facebook}
-                </Link>
+                <SocialLink label={facebook} path={fb} />
               </div>
             </div>
           </div>
           {/* ROW 2 */}
           <div className="flex justify-end text-xs md:text-sm lg:text-md">
-            <Link
-              href={akcentra}
-              target="_blank"
+            <SocialLink
+              label={copyright}
+              path={akcentra}
               className="underline whitespace-nowrap"
-            >
-              {copyright}
-            </Link>
+            />
           </div>
         </div>
       </div>

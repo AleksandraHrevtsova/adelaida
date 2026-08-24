@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { Link } from '@/i18n/navigation';
+import { CustomLink } from '@/components/ui/Link';
 import { useTranslations } from 'next-intl';
 import { images, type StateName } from '@/data/images';
 import type { CloudinaryImage } from '@/lib/cloudinary';
@@ -69,8 +69,8 @@ function StateCard({ item }: { item: CardItem }) {
   const overlay = overlayStyles[item.state];
 
   return (
-    <Link
-      href={item.href}
+    <CustomLink
+      path={item.href}
       className="
         group
         relative
@@ -125,7 +125,7 @@ function StateCard({ item }: { item: CardItem }) {
 
       {/* Text overlay */}
       <CardOverlay state={item.state} />
-    </Link>
+    </CustomLink>
   );
 }
 

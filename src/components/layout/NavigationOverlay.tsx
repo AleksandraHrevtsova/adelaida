@@ -1,9 +1,11 @@
 'use client';
 
-import Link from 'next/link';
+import { CustomLink, SocialLink } from '@/components/ui/Link';
 import { AnimatePresence, motion } from 'framer-motion';
 import { X } from 'lucide-react';
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
+import { routes } from '@/constants/routes';
+import links from '@/constants/socialLinks';
 
 type NavigationOverlayProps = {
   isOpen: boolean;
@@ -14,44 +16,37 @@ export default function NavigationOverlay({
   isOpen,
   onCloseAction,
 }: NavigationOverlayProps) {
-  const locale = useLocale();
-  const t = useTranslations('navigation');
+  const t = useTranslations();
 
-  const collections = [
-    {
-      href: '/' + locale + '/collections/fire',
-      label: t('fire'),
-    },
-    {
-      href: '/' + locale + '/collections/water',
-      label: t('water'),
-    },
-    {
-      href: '/' + locale + '/collections/air',
-      label: t('air'),
-    },
-    {
-      href: '/' + locale + '/collections/earth',
-      label: t('earth'),
-    },
-  ];
+  const brand_art_mask = t('brand_art_mask');
+
+  const instagram = t('instagram');
+  const facebook = t('facebook');
+
+  const insta = links.socialLinks.instagram;
+  const fb = links.socialLinks.facebook;
+
+  const stateCollectionsList = Object.entries(routes.collectionsItems).map(([key, value]) => ({
+    href: value,
+    label: t(`navigation.${key}`),
+  }));
 
   const pages = [
     {
-      href: '/#states',
-      label: t('states'),
+      href: routes.collections,
+      label: t('navigation.collections'),
     },
     {
-      href: '#/process',
-      label: t('process'),
+      href: routes.process,
+      label: t('navigation.process'),
     },
     {
-      href: '#/fashion',
-      label: t('patches'),
+      href: routes.patches,
+      label: t('navigation.patches'),
     },
     {
-      href: '#/fashion',
-      label: t('accessories'),
+      href: routes.accessories,
+      label: t('navigation.accessories'),
     },
   ];
 
@@ -106,22 +101,20 @@ export default function NavigationOverlay({
                 transition={{ delay: 0.1, duration: 0.5 }}
               >
                 <div className="mb-6 font-mono text-sm uppercase tracking-[0.3em] text-white/50">
-                  {t('title')}
+                  {t('navigation.title')}
                 </div>
 
                 <nav className="flex flex-col gap-5">
                   {pages.map((item) => (
-                    <Link
+                    <CustomLink
                       key={item.href}
-                      href={item.href}
+                      path={item.href}
                       onClick={onCloseAction}
                       className="
                         group w-fit
                         text-4xl md:text-6xl lg:text-7xl
                         font-light uppercase
                         tracking-wide
-                        transition-opacity
-                        hover:opacity-60
                       "
                     >
                       <span className="relative">
@@ -136,7 +129,7 @@ export default function NavigationOverlay({
                           "
                         />
                       </span>
-                    </Link>
+                    </CustomLink>
                   ))}
                 </nav>
               </motion.div>
@@ -150,21 +143,19 @@ export default function NavigationOverlay({
                 className="lg:pt-24"
               >
                 <div className="mb-6 font-mono text-sm uppercase tracking-[0.3em] text-white/50">
-                  {t('collections')}
+                  {t('navigation.states')}
                 </div>
 
                 <div className="flex flex-col gap-4">
-                  {collections.map((item) => (
-                    <Link
+                  {stateCollectionsList.map((item) => (
+                    <CustomLink
                       key={item.href}
-                      href={item.href}
+                      path={item.href}
                       onClick={onCloseAction}
                       className="
                         group w-fit
                         text-2xl md:text-3xl
                         uppercase tracking-wide
-                        transition-opacity
-                        hover:opacity-60
                       "
                     >
                       <span className="relative">
@@ -179,7 +170,7 @@ export default function NavigationOverlay({
                           "
                         />
                       </span>
-                    </Link>
+                    </CustomLink>
                   ))}
                 </div>
               </motion.div>
@@ -201,26 +192,12 @@ export default function NavigationOverlay({
                 md:flex-row md:items-center md:justify-between
               "
             >
-              <div>ADELAIDA ART MASK</div>
+              <div>{brand_art_mask}</div>
 
               <div className="flex items-center gap-4">
-                <Link
-                  href="https://www.instagram.com/adelaida_art_mask"
-                  target="_blank"
-                  className="hover:opacity-60"
-                >
-                  Instagram
-                </Link>
-
+                <SocialLink label={instagram} path={insta} />
                 <span>/</span>
-
-                <Link
-                  href="https://www.facebook.com/adelaidaartmask"
-                  target="_blank"
-                  className="hover:opacity-60"
-                >
-                  Facebook
-                </Link>
+                <SocialLink label={facebook} path={fb} />
               </div>
             </motion.div>
           </div>

@@ -3,12 +3,13 @@
 import { useTranslations } from 'next-intl';
 
 import NavigationMenu from '@/components/layout/NavigationMenu';
-import ResponsiveImage from '@/components/ui/ResponsiveImage';
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
-import Link from '@/components/ui/Link';
 
+import ResponsiveImage from '@/components/ui/ResponsiveImage';
 import { images } from '@/data/images';
+
 import links from '@/constants/socialLinks';
+import { SocialLink } from '@/components/ui/Link';
 
 export default function HeroSection() {
   const t = useTranslations();
@@ -49,9 +50,9 @@ export default function HeroSection() {
           <div className='flex flex-col gap-4 text-sm sm:flex-row sm:items-center sm:justify-between sm:text-base'>
             <div className='flex flex-col'>
               <div className='w-full flex gap-3'>
-                <Link label={instagram} path={insta} isBlank />
+                <SocialLink label={instagram} path={insta} isBlank />
                 <span>/</span>
-                <Link label={facebook} path={fb} isBlank />
+                <SocialLink label={facebook} path={fb} isBlank />
               </div>
 
               <span className='max-w-[20ch] text-[clamp(2rem,3vw,1.5rem)] leading-[1.3] tracking-[-0.01em] text-white/80'>
@@ -65,7 +66,7 @@ export default function HeroSection() {
         <div className='relative min-h-[70vh] lg:min-h-screen'>
           <ResponsiveImage
             src={images.hero.src}
-            alt={images.hero.alt}
+            alt={t(images.hero.alt)}
             fill
             priority
             sizes='(min-width: 1024px) 50vw, 100vw'
