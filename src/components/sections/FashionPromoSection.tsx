@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useTranslations } from 'next-intl';
 
 export default function FashionPromoSection() {
-  const t = useTranslations('fashion');
+  const t = useTranslations();
 
   return (
     <section className="w-full bg-[#e9e9e9] py-16 md:py-24 overflow-hidden">
@@ -24,12 +24,12 @@ export default function FashionPromoSection() {
 
             <div className="mt-6">
               <h2 className="text-3xl font-light tracking-tight text-black md:text-5xl">
-                {t('accessoriesTitle')}
+                {t('fashion.accessoriesTitle')}
               </h2>
 
               <button className="group mt-6 inline-flex items-center gap-2 text-base text-black">
                 <span className="relative">
-                  {t('accessoriesButton')}
+                  {t('select')}
                   <span className="absolute -bottom-1 left-0 h-1 w-full bg-[#0c0c0c]" />
                 </span>
 
