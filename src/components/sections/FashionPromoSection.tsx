@@ -19,6 +19,7 @@ export default function FashionPromoSection() {
                 width={700}
                 height={520}
                 className="h-80 w-full object-cover md:h-105"
+                loading="eager"
               />
             </div>
 
@@ -74,7 +75,7 @@ export default function FashionPromoSection() {
           {/* VERTICAL TEXT */}
           <div className="pointer-events-none absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 lg:block">
             <span className="select-none text-[120px] font-semibold tracking-[0.35em] text-[#e8c8bd] writing-mode-vertical">
-              {t('vertical_text')}
+              {t('fashion.vertical_text')}
             </span>
           </div>
         </div>

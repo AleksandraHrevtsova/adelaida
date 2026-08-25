@@ -66,7 +66,7 @@ export default function HeroSection() {
         <div className='relative min-h-[70vh] lg:min-h-screen'>
           <ResponsiveImage
             src={images.hero.src}
-            alt={t(images.hero.alt)}
+            alt={t(`hero.${images.hero.alt}`)}
             fill
             priority
             sizes='(min-width: 1024px) 50vw, 100vw'

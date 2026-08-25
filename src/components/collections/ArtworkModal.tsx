@@ -62,7 +62,7 @@ export default function ArtworkModal({
               className="
                 relative
                 h-[60vh]
-                min-h-[400px]
+                min-h-100
                 shrink-0
 
                 lg:h-full
@@ -80,6 +80,7 @@ export default function ArtworkModal({
                   60vw
                 "
                 className="object-cover"
+                loading="eager"
                 priority
               />
             </div>

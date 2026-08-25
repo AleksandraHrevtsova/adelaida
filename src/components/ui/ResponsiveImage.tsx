@@ -46,6 +46,7 @@ export default function ResponsiveImage({
           priority={priority}
           sizes={sizes}
           className={imageClass}
+          loading="eager"
         />
       ) : (
         <Image
@@ -56,6 +57,7 @@ export default function ResponsiveImage({
           priority={priority}
           sizes={sizes}
           className={imageClass}
+          loading="eager"
         />
       )}
     </div>

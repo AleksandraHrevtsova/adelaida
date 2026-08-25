@@ -122,6 +122,7 @@ function StateCard({ item }: { item: CardItem }) {
             (max-width: 1279px) 50vw,
             25vw
           "
+          loading="eager"
         />
       </div>
 
