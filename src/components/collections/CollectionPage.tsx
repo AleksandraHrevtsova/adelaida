@@ -63,7 +63,33 @@ export default function CollectionPage({ collection }: Props) {
                   key={artwork.id}
                   onClick={() => setSelectedArtwork(artwork)}
                   className="group relative mb-5 block w-full overflow-hidden bg-black text-left">
-                  <div
+                    <div className="relative overflow-hidden bg-black">
+  <Image
+    src={artwork.image}
+    alt={altText}
+    width={1200}
+    height={1800}
+    className="block h-auto w-full transition-transform duration-700 group-hover:scale-[1.03]"
+    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+  />
+
+  {/* OVERLAY */}
+  <div
+    className="
+      absolute inset-x-0 bottom-0
+      flex items-end
+      bg-linear-to-t from-black/80 to-transparent
+      p-6
+      opacity-0 transition-opacity duration-300
+      group-hover:opacity-100
+    "
+  >
+    <h2 className="text-2xl uppercase tracking-wide text-white md:text-3xl">
+      {title}
+    </h2>
+  </div>
+</div>
+                  {/* <div
                     className={`
                       relative overflow-hidden
                       ${index % 3 === 0 ? 'aspect-4/5' : ''}
@@ -80,7 +106,6 @@ export default function CollectionPage({ collection }: Props) {
                       loading="eager"
                     />
 
-                    {/* OVERLAY */}
                     <div
                       className="
                         absolute inset-x-0 bottom-0
@@ -95,7 +120,7 @@ export default function CollectionPage({ collection }: Props) {
                         {title}
                       </h2>
                     </div>
-                  </div>
+                  </div> */}
                 </button>
               );
             })}
