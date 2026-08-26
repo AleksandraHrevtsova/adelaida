@@ -17,11 +17,13 @@ export default function Footer() {
 
   const instagram = t('instagram_short');
   const facebook = t('facebook_short');
+  const linkedin = t('linkedin_short');
 
   const copyright = t('footer.copyright');
 
   const insta = links.socialLinks.instagram;
   const fb = links.socialLinks.facebook;
+  const ln = links.socialLinks.linkedin;
 
   const akcentra = links.socialLinks.akcentra_linkedin;
 
@@ -75,7 +77,7 @@ export default function Footer() {
       </div>
 
       {/* BOTTOM */}
-      <div className="py-10 font-mono uppercase text-black text-lg px-5 md:px-8 lg:px-12 pb-6">
+      <div className="py-10 font-mono text-black text-lg px-5 md:px-8 lg:px-12 pb-6">
         <div className="flex flex-col gap-6">
           {/* ROW 1 */}
           <div className="flex items-center justify-between flex-wrap gap-6">
@@ -83,9 +85,11 @@ export default function Footer() {
             <div className="flex items-center gap-6 flex-wrap">
               <span className="font-bold">{brand}</span>
               <div className="flex items-center gap-4">
-                <SocialLink label={instagram} path={insta} />
+                <SocialLink className='uppercase' label={instagram} path={insta} />
                 <Separator />
-                <SocialLink label={facebook} path={fb} />
+                <SocialLink className='uppercase' label={facebook} path={fb} />
+                <Separator />
+                <SocialLink label={linkedin} path={ln} />
               </div>
             </div>
           </div>

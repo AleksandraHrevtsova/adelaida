@@ -24,9 +24,11 @@ export default function NavigationOverlay({
 
   const instagram = t('instagram');
   const facebook = t('facebook');
+  const linkedin = t('linkedin');
 
   const insta = links.socialLinks.instagram;
   const fb = links.socialLinks.facebook;
+  const ln = links.socialLinks.linkedin;
 
   const stateCollectionsList = Object.entries(routes.collectionsItems).map(([key, value]) => ({
     href: value,
@@ -189,18 +191,20 @@ export default function NavigationOverlay({
                 flex flex-col gap-4
                 border-t border-white/20
                 pt-6
-                font-mono text-sm uppercase
+                font-mono text-sm
                 tracking-[0.2em]
                 md:flex-row md:items-center md:justify-between
               "
             >
               <LanguageSwitcher />
-              <div>{brand_art_mask}</div>
+              <div className='uppercase'>{brand_art_mask}</div>
 
               <div className="flex items-center gap-4">
                 <SocialLink label={instagram} path={insta} />
                 <Separator />
                 <SocialLink label={facebook} path={fb} />
+                <Separator />
+                <SocialLink label={linkedin} path={ln} />
               </div>
             </motion.div>
           </div>
