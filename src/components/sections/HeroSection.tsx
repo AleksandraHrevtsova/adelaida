@@ -2,7 +2,6 @@
 
 import { useTranslations } from 'next-intl';
 
-import NavigationMenu from '@/components/layout/NavigationMenu';
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
 
 import ResponsiveImage from '@/components/ui/ResponsiveImage';
@@ -10,6 +9,8 @@ import { images } from '@/data/images';
 
 import links from '@/constants/socialLinks';
 import { SocialLink } from '@/components/ui/Link';
+
+import { Separator } from '@/components/ui/Separator';
 
 export default function HeroSection() {
   const t = useTranslations();
@@ -19,6 +20,7 @@ export default function HeroSection() {
   const title = t('hero.title');
   const subTitle = t('hero.subTitle');
   const description = t('hero.description');
+
   const instagram = t('instagram');
   const facebook = t('facebook');
 
@@ -28,36 +30,86 @@ export default function HeroSection() {
   return (
     <section className='min-h-screen bg-white'>
       <div className='grid min-h-screen grid-cols-1 lg:grid-cols-2'>
-        {/* LEFT SIDE */}
-        <NavigationMenu />
         <div className='flex flex-col justify-between bg-[#1f0101] px-6 py-8 text-white sm:px-10 sm:py-10 lg:px-16 lg:py-14'>
-          {/* TOP NAV */}
           <div className='flex justify-end'>
             <LanguageSwitcher />
           </div>
+          {/* LEFT SIDE */}
+          <div
+            className='
+              flex flex-col justify-between
+              bg-[#1f0101]
+              px-6 py-8
+              text-white
+              sm:px-10 sm:py-10
+              lg:px-16 lg:py-14
+            '
+          >
+            {/* MAIN TEXT */}
+            <div className='max-w-[90vw] py-12 sm:max-w-175 lg:py-0'>
+              <h1
+                className='
+                  flex flex-col gap-3
+                  text-[clamp(2.5rem,8vw,5.25rem)]
+                  font-medium
+                  leading-[0.95]
+                  tracking-[-0.03em]
+                  wrap-break-words
+                '
+              >
+                <span>{subTitle}</span>
 
-          {/* MAIN TEXT */}
-          <div className='max-w-[90vw] py-12 sm:max-w-175 lg:py-0'>
-            <h1 className='flex flex-col gap-3 text-[clamp(2.5rem,8vw,5.25rem)] font-medium leading-[0.95] tracking-[-0.03em] wrap-break-words'>
-              <span>{subTitle}</span>
-              <span className='mt-4 max-w-[40ch] text-[clamp(1rem,3vw,1.5rem)] leading-[1.3] tracking-[-0.01em] text-white/80'>
-                {description}
-              </span>
-            </h1>
-          </div>
+                <span
+                  className='
+                    mt-4
+                    max-w-[40ch]
+                    text-[clamp(1rem,3vw,1.5rem)]
+                    leading-[1.3]
+                    tracking-[-0.01em]
+                    text-white/80
+                  '
+                >
+                  {description}
+                </span>
+              </h1>
+            </div>
 
-          {/* FOOTER LINKS */}
-          <div className='flex flex-col gap-4 text-sm sm:flex-row sm:items-center sm:justify-between sm:text-base'>
-            <div className='flex flex-col'>
-              <div className='w-full flex gap-3'>
-                <SocialLink label={instagram} path={insta} isBlank />
-                <span>/</span>
-                <SocialLink label={facebook} path={fb} isBlank />
+            {/* FOOTER LINKS */}
+            <div
+              className='
+                flex flex-col gap-4
+                text-sm
+                sm:flex-row sm:items-center sm:justify-between
+                sm:text-base
+              '
+            >
+              <div className='flex flex-col'>
+                <div className='flex w-full gap-3'>
+                  <SocialLink
+                    label={instagram}
+                    path={insta}
+                    isBlank
+                  />
+                  <Separator />
+                  <SocialLink
+                    label={facebook}
+                    path={fb}
+                    isBlank
+                  />
+                </div>
+
+                <span
+                  className='
+                    max-w-[20ch]
+                    text-[clamp(2rem,3vw,1.5rem)]
+                    leading-[1.3]
+                    tracking-[-0.01em]
+                    text-white/80
+                  '
+                >
+                  {title}
+                </span>
               </div>
-
-              <span className='max-w-[20ch] text-[clamp(2rem,3vw,1.5rem)] leading-[1.3] tracking-[-0.01em] text-white/80'>
-                {title}
-              </span>
             </div>
           </div>
         </div>
@@ -73,7 +125,19 @@ export default function HeroSection() {
           />
 
           <div className='absolute bottom-6 left-5 z-10 sm:bottom-10 sm:left-10 lg:bottom-14 lg:left-14'>
-            <h2 className='text-[80px] font-black uppercase leading-[0.9] tracking-tighter text-white sm:text-[110px] md:text-[120px] lg:text-[120px]'>
+            <h2
+              className='
+                text-[80px]
+                font-black
+                uppercase
+                leading-[0.9]
+                tracking-tighter
+                text-white
+                sm:text-[110px]
+                md:text-[120px]
+                lg:text-[120px]
+              '
+            >
               {brand}
             </h2>
           </div>

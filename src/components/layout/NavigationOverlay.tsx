@@ -6,6 +6,8 @@ import { X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { routes } from '@/constants/routes';
 import links from '@/constants/socialLinks';
+import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
+import { Separator } from '@/components/ui/Separator';
 
 type NavigationOverlayProps = {
   isOpen: boolean;
@@ -192,11 +194,12 @@ export default function NavigationOverlay({
                 md:flex-row md:items-center md:justify-between
               "
             >
+              <LanguageSwitcher />
               <div>{brand_art_mask}</div>
 
               <div className="flex items-center gap-4">
                 <SocialLink label={instagram} path={insta} />
-                <span>/</span>
+                <Separator />
                 <SocialLink label={facebook} path={fb} />
               </div>
             </motion.div>

@@ -8,6 +8,8 @@ import { images } from '@/data/images';
 import links from '@/constants/socialLinks';
 import { SocialLink } from '@/components/ui/Link';
 
+import { Separator } from '@/components/ui/Separator';
+
 export default function Footer() {
   const t = useTranslations();
 
@@ -82,7 +84,7 @@ export default function Footer() {
               <span className="font-bold">{brand}</span>
               <div className="flex items-center gap-4">
                 <SocialLink label={instagram} path={insta} />
-                <span>/</span>
+                <Separator />
                 <SocialLink label={facebook} path={fb} />
               </div>
             </div>
