@@ -23,9 +23,7 @@ export default function FloatingNavigation() {
         const activeSection = visibleSections[0];
 
         if (activeSection) {
-          setIsDark(
-            activeSection.target.getAttribute('data-nav-theme') === 'dark'
-          );
+          setIsDark(activeSection.target.getAttribute('data-nav-theme') === 'dark');
         }
       },
       {

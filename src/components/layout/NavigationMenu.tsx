@@ -1,18 +1,22 @@
 'use client';
 
-import { useState } from 'react';
 import NavigationOverlay from './NavigationOverlay';
+import { useNavigation } from './NavigationContext';
 
 const baseSpan = 'block h-px w-full bg-current';
 
 export default function NavigationMenu() {
-  const [isOpen, setIsOpen] = useState(false);
+  const {
+    isOpen,
+    toggleMenu,
+    closeMenu,
+  } = useNavigation();
 
   return (
     <div>
       <button
         type="button"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={toggleMenu}
         className="
           relative z-50
           flex h-7 w-10 flex-col justify-between
@@ -44,8 +48,8 @@ export default function NavigationMenu() {
 
       <NavigationOverlay
         isOpen={isOpen}
-        onCloseAction={() => setIsOpen(false)}
+        onCloseAction={closeMenu}
       />
     </div>
   );
-}
+};

@@ -6,6 +6,7 @@ import {getMessages} from 'next-intl/server';
 
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
+import FloatingNavigation from '@/components/layout/FloatingNavigation';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -75,6 +76,7 @@ export default async function LocaleLayout({
   return (
     <NextIntlClientProvider messages={messages} locale={locale}>
       <div lang={locale} className={`${geistSans.variable} ${geistMono.variable} min-h-screen antialiased`}>
+        <FloatingNavigation />
         {children}
       </div>
     </NextIntlClientProvider>

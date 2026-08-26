@@ -23,33 +23,44 @@ export default function HeroSection() {
 
   const instagram = t('instagram');
   const facebook = t('facebook');
+  const linkedin = t('linkedin');
 
   const insta = links.socialLinks.instagram;
   const fb = links.socialLinks.facebook;
+  const ln = links.socialLinks.linkedin;
 
   return (
     <section className='min-h-screen bg-white'>
       <div className='grid min-h-screen grid-cols-1 lg:grid-cols-2'>
-        <div className='flex flex-col justify-between bg-[#1f0101] px-6 py-8 text-white sm:px-10 sm:py-10 lg:px-16 lg:py-14'>
+        {/* LEFT SIDE */}
+        <div
+          className='
+            flex min-h-[70vh] flex-col
+            bg-[#1f0101]
+            px-6 py-8
+            text-white
+            sm:px-10 sm:py-10
+            lg:min-h-screen lg:px-16 lg:py-14
+          '
+        >
+          {/* LANGUAGE SWITCHER */}
           <div className='flex justify-end'>
             <LanguageSwitcher />
           </div>
-          {/* LEFT SIDE */}
+
+          {/* MAIN CONTENT */}
           <div
             className='
-              flex flex-col justify-between
-              bg-[#1f0101]
-              px-6 py-8
-              text-white
-              sm:px-10 sm:py-10
-              lg:px-16 lg:py-14
+              flex flex-1 flex-col
+              justify-center
+              py-16
+              lg:py-20
             '
           >
-            {/* MAIN TEXT */}
-            <div className='max-w-[90vw] py-12 sm:max-w-175 lg:py-0'>
+            {/* SUBTITLE */}
+            <div className='max-w-[90vw] sm:max-w-175'>
               <h1
                 className='
-                  flex flex-col gap-3
                   text-[clamp(2.5rem,8vw,5.25rem)]
                   font-medium
                   leading-[0.95]
@@ -57,58 +68,75 @@ export default function HeroSection() {
                   wrap-break-words
                 '
               >
-                <span>{subTitle}</span>
-
-                <span
-                  className='
-                    mt-4
-                    max-w-[40ch]
-                    text-[clamp(1rem,3vw,1.5rem)]
-                    leading-[1.3]
-                    tracking-[-0.01em]
-                    text-white/80
-                  '
-                >
-                  {description}
-                </span>
+                {subTitle}
               </h1>
             </div>
 
-            {/* FOOTER LINKS */}
+            {/* DESCRIPTION */}
             <div
               className='
-                flex flex-col gap-4
-                text-sm
-                sm:flex-row sm:items-center sm:justify-between
-                sm:text-base
+                mt-12
+                max-w-[60ch]
+                sm:mt-16
+                lg:mt-20
               '
             >
-              <div className='flex flex-col'>
-                <div className='flex w-full gap-3'>
-                  <SocialLink
-                    label={instagram}
-                    path={insta}
-                    isBlank
-                  />
-                  <Separator />
-                  <SocialLink
-                    label={facebook}
-                    path={fb}
-                    isBlank
-                  />
-                </div>
+              <p
+                className='
+                  text-[clamp(1rem,3vw,1.5rem)]
+                  leading-[1.3]
+                  tracking-[-0.01em]
+                  text-white/80
+                '
+              >
+                {description}
+              </p>
+            </div>
+          </div>
 
-                <span
-                  className='
-                    max-w-[20ch]
-                    text-[clamp(2rem,3vw,1.5rem)]
-                    leading-[1.3]
-                    tracking-[-0.01em]
-                    text-white/80
-                  '
-                >
-                  {title}
-                </span>
+          {/* FOOTER LINKS */}
+          <div
+            className='
+              flex flex-col gap-4
+              text-sm
+              sm:text-base
+            '
+          >
+            <div className='flex flex-col'>
+              <span
+                className='
+                  max-w-[20ch]
+                  text-[clamp(2rem,3vw,1.5rem)]
+                  leading-[1.3]
+                  tracking-[-0.01em]
+                  text-white/80
+                '
+              >
+                {title}
+              </span>
+
+              <div className='flex w-full gap-3 mt-4'>
+                <SocialLink
+                  label={instagram}
+                  path={insta}
+                  isBlank
+                />
+
+                <Separator />
+
+                <SocialLink
+                  label={facebook}
+                  path={fb}
+                  isBlank
+                />
+
+                <Separator />
+
+                <SocialLink
+                  label={linkedin}
+                  path={ln}
+                  isBlank
+                />
               </div>
             </div>
           </div>
@@ -124,7 +152,13 @@ export default function HeroSection() {
             sizes='(min-width: 1024px) 50vw, 100vw'
           />
 
-          <div className='absolute bottom-6 left-5 z-10 sm:bottom-10 sm:left-10 lg:bottom-14 lg:left-14'>
+          <div
+            className='
+              absolute bottom-6 left-5 z-10
+              sm:bottom-10 sm:left-10
+              lg:bottom-14 lg:left-14
+            '
+          >
             <h2
               className='
                 text-[80px]
