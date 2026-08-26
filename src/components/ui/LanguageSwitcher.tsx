@@ -3,8 +3,10 @@
 import { useRouter, usePathname } from '@/i18n/navigation';
 import localeConfig from '@/constants/locales';
 import { Separator } from '@/components/ui/Separator';
+import { useTranslations } from 'next-intl';
 
 export default function LanguageSwitcher() {
+  const t = useTranslations();
   const router = useRouter();
   const pathname = usePathname();
 
@@ -19,7 +21,7 @@ export default function LanguageSwitcher() {
         onClick={() => switchLocale(localeConfig.locales.en)}
         className="transition-opacity duration-300 hover:opacity-70"
       >
-        EN
+        {t('en')}
       </button>
       <Separator />
       <button
@@ -27,7 +29,7 @@ export default function LanguageSwitcher() {
         onClick={() => switchLocale(localeConfig.locales.ua)}
         className="transition-opacity duration-300 hover:opacity-70"
       >
-        UA
+        {t('ua')}
       </button>
     </div>
   );
