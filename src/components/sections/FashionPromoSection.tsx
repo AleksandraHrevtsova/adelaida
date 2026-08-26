@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { useTranslations } from 'next-intl';
+import { CustomLink } from '@/components/ui/Link';
+import { routes } from '@/constants/routes';
 
 export default function FashionPromoSection() {
   const t = useTranslations();
@@ -28,13 +30,15 @@ export default function FashionPromoSection() {
                 {t('fashion.accessoriesTitle')}
               </h2>
 
-              <button className="group mt-6 inline-flex items-center gap-2 text-base text-black">
+              <CustomLink
+                path={routes.accessories}
+                className="group mt-6 inline-flex items-center gap-2 text-base text-black"
+              >
                 <span className="relative">
                   {t('select')}
-                  <span className="absolute -bottom-1 left-0 h-1 w-full bg-[#0c0c0c]" />
+                  <span className="absolute -bottom-1 left-0 h-1 w-full bg-black/70" />
                 </span>
-
-              </button>
+              </CustomLink>
             </div>
           </div>
 
@@ -52,12 +56,15 @@ export default function FashionPromoSection() {
                   {t('fashion.patchesDescription')}
                 </p>
 
-                <button className="group mt-6 inline-flex items-center gap-2 text-base text-black">
+                <CustomLink
+                  path={routes.patches}
+                  className="group mt-6 inline-flex items-center gap-2 text-base text-black"
+                >
                   <span className="relative">
                     {t('select')}
-                    <span className="absolute -bottom-1 left-0 h-1 w-full bg-[#0c0c0c]" />
+                    <span className="absolute -bottom-1 left-0 h-1 w-full bg-black/70" />
                   </span>
-                </button>
+                </CustomLink>
               </div>
             </div>
 
