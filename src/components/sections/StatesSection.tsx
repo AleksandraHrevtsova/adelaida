@@ -21,10 +21,10 @@ const items: CardItem[] = (Object.keys(images.states) as StateName[]).map((state
 );
 
 const overlayStyles: Record<StateName, string> = {
-  fire: 'bg-red-200/35',
-  water: 'bg-cyan-200/35',
-  air: 'bg-sky-200/35',
-  earth: 'bg-black/20',
+  fire: 'bg-black/10',
+  earth: 'bg-black/10',
+  water: 'bg-black/10',
+  air: 'bg-black/10',
 };
 
 function CardOverlay({
@@ -44,7 +44,6 @@ function CardOverlay({
         border border-white/20
         bg-white/10
         p-6
-        backdrop-blur-sm
 
         opacity-100
         transition-opacity duration-500
