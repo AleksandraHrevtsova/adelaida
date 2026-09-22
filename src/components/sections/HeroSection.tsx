@@ -44,7 +44,7 @@ export default function HeroSection() {
           '
         >
           {/* LANGUAGE SWITCHER */}
-          <div className='flex justify-end'>
+          <div className='flex lg:justify-end sm:justify-center'>
             <LanguageSwitcher />
           </div>
 
