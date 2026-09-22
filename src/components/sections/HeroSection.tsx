@@ -161,13 +161,13 @@ export default function HeroSection() {
           >
             <h2
               className='
-                text-[80px]
+                text-[72px]
                 font-black
                 uppercase
                 leading-[0.9]
                 tracking-tighter
                 text-white
-                sm:text-[110px]
+                sm:text-[100px]
                 md:text-[120px]
                 lg:text-[120px]
               '
