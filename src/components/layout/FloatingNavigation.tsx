@@ -39,7 +39,7 @@ export default function FloatingNavigation() {
   return (
     <div
       className={`
-        fixed left-5 top-5 z-100
+        fixed right-10 top-5 z-100
         flex items-center gap-4
         transition-colors duration-500
         sm:left-8 sm:top-8
