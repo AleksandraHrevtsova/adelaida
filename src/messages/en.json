@@ -42,7 +42,15 @@
 
   "states": {
     "title": "STATES",
-    "description_top": "The cycle consists of four collections of masks, exploring the human condition through four elements. The mask is one of the oldest artistic and ritual objects. It does not conceal — it reveals. Fire, earth, water and air become not representations of nature, but manifestations of inner human states. These are not decorative masks. They are archetypal states of being, expressed through matter, texture and the alteration of form. Each collection represents a distinct stage of inner movement. Fire is an encounter with the shadow and the shadow archetypes within the self. Earth is a return of the body to nature and matter. Water is a descent into the subconscious — a state in which stability and identity begin to dissolve in its depths. Air explores the disappearance of form and the transition into a state of becoming.",
+    "description_top_1": "The cycle consists of four collections of masks, exploring the human condition through four elements.",
+    "description_top_2": "The mask is one of the oldest artistic and ritual objects. It does not conceal — it reveals. Fire, earth, water and air become not representations of nature, but manifestations of inner human states.",
+    "description_top_3": "These are not decorative masks. They are archetypal states of being, expressed through matter, texture and the alteration of form.",
+    "description_top_4": "Each collection represents a distinct stage of inner movement.",
+    "description_top_5": "Fire is an encounter with the shadow and the shadow archetypes within the self.",
+    "description_top_6": "Earth is a return of the body to nature and matter.",
+    "description_top_7": "Water is a descent into the subconscious — a state in which stability and identity begin to dissolve in its depths.",
+    "description_top_8": "Air explores the disappearance of form and the transition into a state of becoming.",
+
     "description_bottom": "The “STATES” series presents the human being not as a fixed identity, but as a shifting system of states. Each element destroys the previous form, transforms identity, and moves the individual into a new state of existence. It is a journey from instinct to body, depth, and ultimately the dissolution of form. Unlike decorative or festival masks, these objects are not made for entertainment. They are created for contemplation, encounter, and inner dialogue. They are artistic artefacts. Each collection consists of seven masks. Seven is a deliberately chosen structure that allows the concept to unfold in its entirety. Each mask is a distinct face of the shadow, a separate state and a process in itself.",
 
     "fire_title": "FIRE",
