@@ -214,9 +214,18 @@ export default function EditorialGrid() {
             />
           ))}
         </div>
-        <div className="mt-14">
-          <p className="text-center text-xl font-semibold tracking-tight text-black md:text-2xl">
-            {t('states.description_bottom')}
+        <div className="mt-10">
+          <p className="mb-4 text-l font-semibold tracking-tight text-black md:text-2xl">
+            {t('states.description_bottom_1')}
+          </p>
+          <p className="mb-4 text-l font-semibold tracking-tight text-black md:text-2xl">
+            {t('states.description_bottom_2')}
+          </p>
+          <p className="mb-4 text-l font-semibold tracking-tight text-black md:text-2xl">
+            {t('states.description_bottom_3')}
+          </p>
+          <p className="mb-4 text-l font-semibold tracking-tight text-black md:text-2xl">
+            {t('states.description_bottom_4')}
           </p>
         </div>
       </div>
