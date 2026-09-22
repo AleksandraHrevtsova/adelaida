@@ -91,6 +91,7 @@ function StateCard({ item }: { item: CardItem }) {
         block
         cursor-pointer
         overflow-hidden
+        mb-10
       "
     >
       {/* Image */}
