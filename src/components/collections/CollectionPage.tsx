@@ -44,7 +44,7 @@ export default function CollectionPage({ collection }: Props) {
       {/* HERO */}
       <section className="px-5 pt-32 pb-16 md:px-8 lg:px-12 lg:pt-40 lg:pb-24">
         <div className="max-w-400 mx-auto">
-          <h1 className="max-w-6xl text-5xl uppercase leading-none tracking-wide md:text-7xl lg:text-[110px]">
+          <h1 className="max-w-6xl text-2xl uppercase leading-none tracking-wide md:text-7xl lg:text-[110px]">
             {t(`states.${collection.key}.title`)}
           </h1>
         </div>
@@ -62,7 +62,7 @@ export default function CollectionPage({ collection }: Props) {
                 <button
                   key={artwork.id}
                   onClick={() => setSelectedArtwork(artwork)}
-                  className="group relative mb-5 block w-full overflow-hidden bg-black text-left">
+                  className="group relative mb-14 block w-full overflow-hidden bg-black text-left">
                     <div className="relative overflow-hidden bg-black">
                       <Image
                         src={artwork.image}
