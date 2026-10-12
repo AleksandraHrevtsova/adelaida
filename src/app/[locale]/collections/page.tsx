@@ -1,5 +1,5 @@
 import ComingSoonPage from '@/components/ui/ComingSoonPage';
 
-export default function PatchesPage() {
+export default function CollectionsPage() {
   return <ComingSoonPage />;
 }

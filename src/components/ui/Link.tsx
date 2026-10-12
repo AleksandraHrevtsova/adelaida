@@ -1,5 +1,8 @@
 import { Link } from '@/i18n/navigation';
-import type { MouseEventHandler, ReactNode } from 'react';
+import type {
+  MouseEventHandler,
+  ReactNode,
+} from 'react';
 
 type Props = {
   children?: ReactNode;
@@ -10,8 +13,11 @@ type Props = {
   className?: string;
 };
 
+const baseLinkClasses =
+  'transition-opacity duration-300 hover:opacity-70 focus:outline-none focus-visible:ring-2 focus-visible:ring-current focus-visible:ring-offset-2';
+
 export const CustomLink = ({
-  label, 
+  label,
   path,
   onClick,
   isBlank = false,
@@ -22,8 +28,9 @@ export const CustomLink = ({
     <Link
       href={path}
       target={isBlank ? '_blank' : undefined}
+      rel={isBlank ? 'noopener noreferrer' : undefined}
       onClick={onClick}
-      className={`${className} transition-opacity duration-300 hover:opacity-70`}
+      className={`${baseLinkClasses} ${className}`}
     >
       {label ?? children}
     </Link>
@@ -31,7 +38,7 @@ export const CustomLink = ({
 };
 
 export const SocialLink = ({
-  label, 
+  label,
   path,
   onClick,
   isBlank = true,
@@ -41,8 +48,9 @@ export const SocialLink = ({
     <Link
       href={path}
       target={isBlank ? '_blank' : undefined}
+      rel={isBlank ? 'noopener noreferrer' : undefined}
       onClick={onClick}
-      className={`${className} transition-opacity duration-300 hover:opacity-70`}
+      className={`${baseLinkClasses} ${className}`}
     >
       {label}
     </Link>

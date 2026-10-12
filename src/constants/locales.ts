@@ -1,11 +1,11 @@
 const locales = {
   en: 'en',
-  ua: 'ua',
+  uk: 'uk',
 };
 
 const localesArray = Object.values(locales);
 
-const defaultLocale = locales.ua; 
+const defaultLocale = locales.uk; 
 
 const localeConfig = {
   locales,

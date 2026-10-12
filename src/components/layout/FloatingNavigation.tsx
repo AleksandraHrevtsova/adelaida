@@ -8,32 +8,58 @@ export default function FloatingNavigation() {
   const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
-    const sections = document.querySelectorAll<HTMLElement>(
-      '[data-nav-theme]'
+    const sections = Array.from(
+      document.querySelectorAll<HTMLElement>('[data-nav-theme]')
     );
 
-    if (!sections.length) return;
+    if (!sections.length) {
+      return;
+    }
+
+    const visibilityMap = new Map<
+      HTMLElement,
+      IntersectionObserverEntry
+    >();
 
     const observer = new IntersectionObserver(
       (entries) => {
-        const visibleSections = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        entries.forEach((entry) => {
+          const element = entry.target as HTMLElement;
 
-        const activeSection = visibleSections[0];
+          visibilityMap.set(element, entry);
+        });
 
-        if (activeSection) {
-          setIsDark(activeSection.target.getAttribute('data-nav-theme') === 'dark');
+        const visibleSections = Array.from(visibilityMap.entries())
+          .filter(([, entry]) => entry.isIntersecting)
+          .sort(
+            ([, a], [, b]) =>
+              b.intersectionRatio - a.intersectionRatio
+          );
+
+        const activeSection = visibleSections[0]?.[0];
+
+        if (!activeSection) {
+          return;
         }
+
+        const theme =
+          activeSection.getAttribute('data-nav-theme');
+
+        setIsDark(theme === 'dark');
       },
       {
         threshold: [0, 0.25, 0.5, 0.75, 1],
       }
     );
 
-    sections.forEach((section) => observer.observe(section));
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      visibilityMap.clear();
+    };
   }, []);
 
   return (
@@ -48,7 +74,6 @@ export default function FloatingNavigation() {
       `}
     >
       <NavigationMenu />
-
     </div>
   );
 }

@@ -1,61 +1,73 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 
-import {NextIntlClientProvider} from 'next-intl';
-import {getMessages} from 'next-intl/server';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
 
-import {notFound} from 'next/navigation';
-import {routing} from '@/i18n/routing';
+import { notFound } from 'next/navigation';
+
+import { routing } from '@/i18n/routing';
+
 import FloatingNavigation from '@/components/layout/FloatingNavigation';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
+const siteTitle =
+  'Adelaida Art Mask — Multidisciplinary Artist';
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
+const siteDescription =
+  'Professional art portfolio and gallery';
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://adelaida-gold.vercel.app/'),
-  title: {
-    default: "Art Master",
-    template: "%s | Art Master",
-  },
-  description: 'Professional art portfolio and gallery',
-  openGraph: {
-    title: 'Adelaida Art Mask',
-    description: 'Professional art portfolio and gallery',
-    url: 'https://adelaida-gold.vercel.app/',
-    siteName: "Adelaida Art Mask",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Art Master",
-      },
-    ],
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
 
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Art Master",
-    description: "Professional art portfolio",
-    images: ["/og-image.jpg"],
-  },
+  if (!routing.locales.includes(locale as 'en' | 'uk')) {
+    notFound();
+  }
 
-  icons: {
-    icon: "/favicon.ico",
-  },
-};
+  const openGraphLocale =
+    locale === 'uk'
+      ? 'uk_UA'
+      : 'en_US';
+
+  return {
+    title: {
+      default: siteTitle,
+      template: '%s | Adelaida Art Mask',
+    },
+
+    description: siteDescription,
+
+    openGraph: {
+      title: siteTitle,
+      description: siteDescription,
+      siteName: 'Adelaida Art Mask',
+      images: [
+        {
+          url: '/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: siteTitle,
+        },
+      ],
+      locale: openGraphLocale,
+      type: 'website',
+    },
+
+    twitter: {
+      card: 'summary_large_image',
+      title: siteTitle,
+      description: siteDescription,
+      images: ['/og-image.jpg'],
+    },
+  };
+}
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
+  return routing.locales.map((locale) => ({
+    locale,
+  }));
 }
 
 export default async function LocaleLayout({
@@ -67,18 +79,23 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
-  if (!routing.locales.includes(locale as 'en' | 'ua')) {
+  if (!routing.locales.includes(locale as 'en' | 'uk')) {
     notFound();
   }
-  
-  const messages = await getMessages({ locale });
+
+  const messages = await getMessages({
+    locale,
+  });
 
   return (
-    <NextIntlClientProvider messages={messages} locale={locale}>
-      <div lang={locale} className={`${geistSans.variable} ${geistMono.variable} min-h-screen antialiased`}>
+    <NextIntlClientProvider
+      messages={messages}
+      locale={locale}
+    >
+      <div className="min-h-screen antialiased">
         <FloatingNavigation />
         {children}
       </div>
     </NextIntlClientProvider>
   );
-};
+}
