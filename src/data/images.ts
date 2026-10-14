@@ -40,13 +40,13 @@ export const imagesIds = {
         saturation: 'v1781698296/earth-saturation_y38iyu.jpg',
       },
       artworks: {
-        saturation: 'v1781698295/saturation_qdfr9r.jpg',
-        return: 'v1781698296/return_uqpjan.jpg',
         germination: 'v1781698295/germination_uxomur.jpg',
-        mineralization: 'v1781698295/mineralization_uglan5.jpg',
-        cover: 'v1781698294/cover_ytsfzl.jpg',
-        merger: 'v1781698294/merger_fehb42.jpg',
         weave: 'v1781698294/weave_uilz2d.jpg',
+        saturation: 'v1781698295/saturation_qdfr9r.jpg',
+        cover: 'v1781698294/cover_ytsfzl.jpg',
+        mineralization: 'v1781698295/mineralization_uglan5.jpg',
+        merger: 'v1781698294/merger_fehb42.jpg',
+        return: 'v1781698296/return_uqpjan.jpg',
       }
     },
 
@@ -55,13 +55,13 @@ export const imagesIds = {
         descent: 'v1786478909/descent_suiaoe.jpg',
       },
       artworks: {
-        descent: 'v1786478909/descent_suiaoe.jpg',
-        adrift: 'v1786478908/adrift_xwhvym.jpg',
-        compression: 'v1786478909/compression_ur7fcb.jpg',
-        bioluminescence: 'v1786478909/bioluminescence_b6bqx5.jpg',
-        undertow: 'v1786478909/undertow_uudbfq.jpg',
-        abyss: 'v1786478910/abyss_bpbfam.jpg',
         surface_tension: 'v1786478910/surface_tension_lpwfqr.jpg',
+        undertow: 'v1786478909/undertow_uudbfq.jpg',
+        descent: 'v1786478909/descent_suiaoe.jpg',
+        compression: 'v1786478909/compression_ur7fcb.jpg',
+        adrift: 'v1786478908/adrift_xwhvym.jpg',
+        abyss: 'v1786478910/abyss_bpbfam.jpg',
+        bioluminescence: 'v1786478909/bioluminescence_b6bqx5.jpg',
       }
     },
 
@@ -70,13 +70,13 @@ export const imagesIds = {
         absence: 'v1787138794/absence_aepzlm.jpg',
       },
       artworks: {
-        absence: 'v1787138794/absence_aepzlm.jpg',
-        panic: 'v1787138795/panic_upxoxd.jpg',
-        exhale: 'v1787138796/exhale_ww4kd0.jpg',
-        white_noise: 'v1787138795/white_noise_ncgofj.jpg',
         first_breath: 'v1787138796/first_breath_mm2kvm.jpg',
+        panic: 'v1787138795/panic_upxoxd.jpg',
+        absence: 'v1787138794/absence_aepzlm.jpg',
+        white_noise: 'v1787138795/white_noise_ncgofj.jpg',
         whisper: 'v1787138794/whisper_bxzsfg.jpg',
         suspension: 'v1787138796/suspension_eusa21.jpg',
+        exhale: 'v1787138796/exhale_ww4kd0.jpg',
       }
     },
   },
