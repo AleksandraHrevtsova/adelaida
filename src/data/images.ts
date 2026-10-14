@@ -72,11 +72,11 @@ export const imagesIds = {
       artworks: {
         first_breath: 'v1787138796/first_breath_mm2kvm.jpg',
         panic: 'v1787138795/panic_upxoxd.jpg',
-        absence: 'v1787138794/absence_aepzlm.jpg',
         white_noise: 'v1787138795/white_noise_ncgofj.jpg',
         whisper: 'v1787138794/whisper_bxzsfg.jpg',
         suspension: 'v1787138796/suspension_eusa21.jpg',
         exhale: 'v1787138796/exhale_ww4kd0.jpg',
+        absence: 'v1787138794/absence_aepzlm.jpg',
       }
     },
   },
