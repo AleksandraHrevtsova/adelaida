@@ -1,5 +1,5 @@
-import ComingSoonPage from '@/components/ui/ComingSoonPage';
+import ProcessPageUI from '@/components/ui/ProcessPage';
 
 export default function ProcessPage() {
-  return <ComingSoonPage />;
+  return <ProcessPageUI />;
 }

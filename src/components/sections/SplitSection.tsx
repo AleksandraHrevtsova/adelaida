@@ -13,9 +13,9 @@ export default function SplitSection() {
 
   const title = t('process.title');
   const ideas = t('process.ideas');
-  const insperation = t('process.insperation');
+  const inspiration = t('process.inspiration');
   const actions = t('process.actions');
-  const influence = t('process.influence');
+  // const moments = t('process.moments');
 
   return (
     <section className="relative h-screen overflow-hidden">
@@ -52,9 +52,9 @@ export default function SplitSection() {
 
           <div className="mb-10 space-y-2 text-2xl md:text-5xl font-light uppercase">
             <p>{ideas}</p>
-            <p>{insperation}</p>
+            <p>{inspiration}</p>
             <p>{actions}</p>
-            <p>{influence}</p>
+            {/* <p>{moments}</p> */}
           </div>
 
           <CustomLink
