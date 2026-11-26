@@ -289,13 +289,68 @@
 
   "process": {
     "title": "Creation",
-    "process": "Processes",
+    "process": "The process",
     "ideas": "Ideas",
-    "insperation": "Insperations",
-    "actions": "Actions",
-    "influence": "Influences",
+    "inspiration": "Inspiration",
+    "actions": "Life & moments",
     "craft_img_alt": "Crafting process of the mask",
-    "paint_img_alt": "Painting process of the mask"
+    "paint_img_alt": "Painting process of the mask",
+    "eyebrow": "Studio · Exploration · Handmade",
+    "heroTitle": "Between material,\nform and feeling",
+    "heroText": "A story of making art objects — from the first touch of a material to the moment a form discovers its own character.",
+    "blocks": {
+      "count": "04",
+      "process": {
+        "number": "01",
+        "title": "The process",
+        "recycled_paper": "Recycled paper",
+        "papier_mache": "Papier-mâché",
+        "textiles": "Textiles",
+        "embroidery": "Embroidery",
+        "natural_elements": "Natural elements",
+        "p_1": "I love working with my hands. I am fascinated by the very act of interacting with a material—altering its structure, building volume, searching for form, and exploring texture.",
+        "p_2": "The primary medium for my masks is recycled paper, which I transform into a pulp for hand-sculpting in the papier-mâché technique. I also weave textiles, threads, embroidery, paints, natural elements, and various finishes into my work.",
+        "p_3": "I am drawn to combining different techniques and experimenting with surfaces and details. Each piece follows its own unique path, evolving from a raw, primary shape into a finished work of art.",
+        "c_1": "Paper pulp",
+        "c_2": "Building volume",
+        "c_3": "Textiles & details",
+        "c_4": "Exploring texture",
+        "quote": "Each piece follows its own unique path, evolving from a raw shape into a finished work."
+      },
+      "ideas": {
+        "number": "02",
+        "title": "Ideas",
+        "p_1": "I don’t always begin a piece with a finished concept or a precise sketch. Sometimes it starts with a quiet feeling; other times, with a shape that gradually reveals its own meaning.",
+        "p_2": "I enjoy exploring an image without a predetermined outcome—allowing it to shift, evolve, and discover its own character along the way.",
+        "p_3": "Often, it is only after a piece is complete that I realize what thoughts, emotions, or inner states have found expression within it. For me, creating is also a way of learning and self-discovery.",
+        "stageNote": "The evolution of a form",
+        "s_1": "A feeling",
+        "s_2": "A shape",
+        "s_3": "A character",
+        "quote": "Sometimes it starts with a quiet feeling; other times, with a shape that gradually reveals its own meaning."
+      },
+      "inspiration": {
+        "number": "03",
+        "title": "Inspiration",
+        "p_1": "I draw inspiration from the world around me—nature, people, colors, textures, accidental finds, and the subtle details that often go unnoticed.",
+        "p_2": "Photography is a vital part of my life. I document my pieces and nearly every stage of their creation. Through the lens, I study form, light, composition, and texture, uncovering new perspectives along the way.",
+        "p_3": "I love painting, working with textiles, embroidery, and upcycling clothing. Translating my visual language from one medium to another is an endless source of curiosity for me.",
+        "p_4": "I find a special kind of inspiration in nature. While walking through the Carpathian Mountains, I used to gather twigs, stones, dried plants, and other organic objects. Studying their shapes and textures, I built my own archive of natural finds—and that is how the concept for my nature-inspired collection was born.",
+        "p_5": "To me, inspiration isn’t a search for something extraordinary. It is the ability to see the extraordinary in everything.",
+        "quote": "It is the ability to see the extraordinary in everything."
+      },
+      "actions": {
+        "number": "04",
+        "title": "Life & moments",
+        "p_1": "My life and my art are inseparable. Travels, new places, encounters, personal experiences, and fleeting observations all become woven into my artistic practice.",
+        "p_2": "I never quite know which impression will transform into a future piece. Sometimes an image lingers in my memory, sometimes it resurfaces after a long while, and sometimes it finds its way into the material almost by chance.",
+        "p_3": "I cherish this unpredictable dialogue between life and creativity. After all, not everything can be planned—some things simply need to be lived.",
+        "quote": "Not everything can be planned—some things simply need to be lived."
+      }
+    },
+    "footer": "Discover the results of this journey",
+    "footerLink": "Explore the collection",
+    "made": "Made by hand · With care for every detail"
   },
 
   "fashion": {
